@@ -34,12 +34,13 @@ The demo runs three customer-support scenarios against all six frameworks in rea
 |----------|-------------|
 | [Benchmark source](arena/) | Framework adapters, MCP tool server, evaluator, and runner |
 | [Benchmark results](arena/results/) | Raw JSON results and summary table from 54 benchmark runs |
-| [Figures](figures/) | Publication-quality figures (architecture, LoC growth, correctness, Pareto, consistency) |
+| [Figures](figures/) | Architecture diagram |
 
 ## Resources
 
 | Resource | Link |
 |----------|------|
+| Demo Video | [video/arena-demo-final.mp4](video/arena-demo-final.mp4) |
 | Conference | [ACM CAIS 2026](https://www.caisconf.org/) |
 
 ## Technology Stack
@@ -55,14 +56,15 @@ The demo runs three customer-support scenarios against all six frameworks in rea
 
 ```
 ├── README.md
-├── figures/                                 # Architecture diagram and publication figures
+├── figures/                                 # Architecture diagram
 ├── arena/
 │   ├── frameworks/                          # 6 framework adapters + 5 multi-agent adapters
-│   ├── scenarios/                           # S1, S2, S3 scenario definitions + prompts
 │   ├── results/                             # Benchmark output (JSON + Markdown)
 │   ├── mcp_server_v2.py                     # FastMCP tool server (8 domain tools)
 │   ├── evaluator.py                         # Deterministic correctness scoring
-│   └── runner_simple.py                     # CLI benchmark runner
+│   ├── runner_simple.py                     # CLI benchmark runner
+│   ├── scenarios.py                         # S1, S2, S3 scenario definitions + prompts
+│   └── metrics.py                           # Code complexity and cost metrics
 ├── pyproject.toml
-└── video/                                   # Demo video (raw binary for archival)
+└── video/                                   # Demo video
 ```
