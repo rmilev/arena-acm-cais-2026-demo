@@ -8,7 +8,7 @@ Usage:
     python -m arena.runner_simple --frameworks aws_strands crewai google_adk
 
     # Specific scenarios only
-    python -m arena.runner_simple --scenarios T1 T4
+    python -m arena.runner_simple --scenarios S1 S2
 
     # Quick validation (K=1 rep, single scenario)
     python -m arena.runner_simple --quick
@@ -80,7 +80,7 @@ FRAMEWORKS = {
     },
 }
 
-ALL_SCENARIOS = ["T1", "T4", "T5"]
+ALL_SCENARIOS = ["S1", "S2", "S3"]
 DEFAULT_K = 3  # repetitions per scenario
 
 
@@ -281,8 +281,8 @@ def main():
         epilog="""Examples:
   python -m arena.runner_simple                          # full benchmark
   python -m arena.runner_simple --frameworks aws_strands crewai
-  python -m arena.runner_simple --scenarios T1 T4
-  python -m arena.runner_simple --quick                  # K=1, T1 only
+  python -m arena.runner_simple --scenarios S1 S2
+  python -m arena.runner_simple --quick                  # K=1, S1 only
   python -m arena.runner_simple --reps 5                 # 5 repetitions
 """)
     parser.add_argument(
@@ -292,18 +292,18 @@ def main():
     parser.add_argument(
         "--scenarios", nargs="+", choices=ALL_SCENARIOS,
         default=ALL_SCENARIOS,
-        help="Scenarios to run (default: T1 T4 T5)")
+        help="Scenarios to run (default: S1 S2 S3)")
     parser.add_argument(
         "--reps", type=int, default=DEFAULT_K,
         help=f"Repetitions per scenario (default: {DEFAULT_K})")
     parser.add_argument(
         "--quick", action="store_true",
-        help="Quick validation: K=1, T1 only")
+        help="Quick validation: K=1, S1 only")
 
     args = parser.parse_args()
 
     if args.quick:
-        args.scenarios = ["T1"]
+        args.scenarios = ["S1"]
         args.reps = 1
 
     total_runs = len(args.frameworks) * len(args.scenarios) * args.reps

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test a single framework for Scenario-3 (T5)
+Test a single framework for Scenario-3 (S3)
 
 Usage:
     python scripts/test_single_framework.py claude_sdk
@@ -46,7 +46,7 @@ def test_framework(framework_key: str):
         return
 
     framework_name, framework_class = FRAMEWORKS[framework_key]
-    scenario_name = "T5"
+    scenario_name = "S3"
     scenario = SCENARIOS[scenario_name]
 
     print("="*80)

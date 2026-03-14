@@ -1,4 +1,4 @@
-# Scenario-3: Multi-Agent Product Investigation & Recommendation (T5)
+# Scenario-3: Multi-Agent Product Investigation & Recommendation (S3)
 
 **Type**: Complex Multi-Agent Collaboration
 **Expected Duration**: 45-60 seconds
@@ -17,7 +17,7 @@ This scenario tests a framework's ability to decompose a complex customer reques
 
 ---
 
-## Test Case (T5)
+## Test Case (S3)
 
 ### Customer Request
 

@@ -1,4 +1,4 @@
-# Multi-Agent Skill Integration for Scenario-3 (T5)
+# Multi-Agent Skill Integration for Scenario-3 (S3)
 
 **Date**: March 13, 2026
 **Status**: ✅ Integrated and Ready
@@ -7,7 +7,7 @@
 
 ## Overview
 
-Instead of implementing custom multi-agent orchestration code, Scenario-3 (T5) now uses a **Claude skill** that Claude automatically invokes when appropriate.
+Instead of implementing custom multi-agent orchestration code, Scenario-3 (S3) now uses a **Claude skill** that Claude automatically invokes when appropriate.
 
 ## How It Works
 
@@ -22,7 +22,7 @@ Claude Agent SDK automatically detects skills in this directory.
 
 ### 2. Automatic Triggering
 
-When Claude receives a T5 scenario prompt (which involves multiple questions about refunds, products, discounts, and budget), the skill's description matches and Claude automatically invokes it.
+When Claude receives a S3 scenario prompt (which involves multiple questions about refunds, products, discounts, and budget), the skill's description matches and Claude automatically invokes it.
 
 **Skill Description** (from SKILL.md):
 > Handle complex multi-faceted customer inquiries involving product recommendations, refund status, discount calculations, and budget optimization. Use this skill when a customer has 2+ interrelated questions...
@@ -39,7 +39,7 @@ When Claude receives a T5 scenario prompt (which involves multiple questions abo
 **Removed**:
 - `arena/frameworks/claude_sdk_multiagent.py` (no longer needed)
 
-### 4. Running T5 with the Skill
+### 4. Running S3 with the Skill
 
 ```bash
 # Use the existing test runner - no changes needed
@@ -48,7 +48,7 @@ python scripts/run_scenario3.py 1
 
 When the scenario runs:
 1. Claude Agent SDK starts with `claude_sdk_agent.py`
-2. Claude sees the T5 prompt (multiple interrelated questions)
+2. Claude sees the S3 prompt (multiple interrelated questions)
 3. Claude's skill description matcher triggers `multi-agent-product-investigation`
 4. The skill coordinates research, analysis, and communication phases
 5. Claude uses MCP tools (from mcp_server_v2) to get real data
@@ -130,8 +130,8 @@ python -c "
 from arena.frameworks.claude_sdk_agent import ClaudeSDKAdapter
 from arena.scenarios import SCENARIOS
 
-adapter = ClaudeSDKAdapter(SCENARIOS['T5']['user_message'])
-response = adapter.run_agent(SCENARIOS['T5']['user_message'])
+adapter = ClaudeSDKAdapter(SCENARIOS['S3']['user_message'])
+response = adapter.run_agent(SCENARIOS['S3']['user_message'])
 print(response)
 "
 ```
@@ -214,7 +214,7 @@ The integration is complete and ready to use!
 
 **For running benchmarks**:
 - Use existing scripts (no changes)
-- Claude will automatically use the skill for T5
+- Claude will automatically use the skill for S3
 
 **For improving the skill**:
 - Use skill-creator to iterate on the skill

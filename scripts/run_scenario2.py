@@ -23,7 +23,7 @@ def run_scenario2_iteration(iteration_number: int):
 
     print(f"\n{'='*80}")
     print(f"SCENARIO-2 ITERATION {iteration_number}")
-    print(f"Complex Multi-Issue Customer Support (T4)")
+    print(f"Complex Multi-Issue Customer Support (S2)")
     print(f"{'='*80}\n")
 
     # Import after printing banner
@@ -93,7 +93,7 @@ def run_scenario2_iteration(iteration_number: int):
         }
 
     def run_framework_benchmark(fw_name: str):
-        """Run T4 benchmark for one framework."""
+        """Run S2 benchmark for one framework."""
         print(f"\n{'='*70}")
         print(f"BENCHMARKING: {fw_name}")
         print(f"{'='*70}")
@@ -111,8 +111,8 @@ def run_scenario2_iteration(iteration_number: int):
             "scenarios": {}
         }
 
-        # Only run T4 for Scenario-2
-        scenario_id = "T4"
+        # Only run S2 for Scenario-2
+        scenario_id = "S2"
         print(f"\n--- Test {scenario_id} ---")
         runs = []
 
@@ -211,7 +211,7 @@ def run_scenario2_iteration(iteration_number: int):
 
     # Print summary
     print(f"\n{'='*80}")
-    print("SUMMARY - T4: The Frustrated Premium Customer")
+    print("SUMMARY - S2: The Frustrated Premium Customer")
     print(f"{'='*80}\n")
 
     for fw_name, fw_results in all_results.items():
@@ -221,9 +221,9 @@ def run_scenario2_iteration(iteration_number: int):
 
         print(f"{fw_name}:")
         print(f"  LoC: {fw_results['lines_of_code']}, CC: {fw_results['cyclomatic_complexity']:.1f}")
-        s4_data = fw_results.get("scenarios", {}).get("T4")
+        s4_data = fw_results.get("scenarios", {}).get("S2")
         if s4_data:
-            print(f"  T4: latency={s4_data['median_latency']:.2f}s, "
+            print(f"  S2: latency={s4_data['median_latency']:.2f}s, "
                   f"correctness={s4_data['per_run_correctness']}, "
                   f"pass³={s4_data['consistency_pass3']:.2f}")
         print()
@@ -247,7 +247,7 @@ def generate_summary(iteration: int, results: dict, iteration_dir: Path):
             continue
 
         scenarios = fw_data.get("scenarios", {})
-        s4 = scenarios.get("T4", {})
+        s4 = scenarios.get("S2", {})
 
         if not s4:
             continue
@@ -274,7 +274,7 @@ def generate_summary(iteration: int, results: dict, iteration_dir: Path):
         "",
         f"**Date**: {datetime.now().strftime('%Y-%m-%d')}",
         f"**Status**: ✅ Complete",
-        f"**Scenario**: T4 - The Frustrated Premium Customer (Complex Multi-Issue)",
+        f"**Scenario**: S2 - The Frustrated Premium Customer (Complex Multi-Issue)",
         "",
         "---",
         "",
@@ -313,7 +313,7 @@ def generate_summary(iteration: int, results: dict, iteration_dir: Path):
         "",
         "## Detailed Results",
         "",
-        "### T4: The Frustrated Premium Customer",
+        "### S2: The Frustrated Premium Customer",
         "",
         "**Customer Issues**:",
         "1. Damaged laptop #ORD-1234 (needs refund)",

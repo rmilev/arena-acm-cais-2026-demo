@@ -4,7 +4,7 @@
 **Iteration**: 2
 **Execution Mode**: Parallel (all frameworks simultaneously)
 **Total Wall-Clock Time**: 276.88s
-**Scenarios**: T1, T2, T3, T4 (all scenarios)
+**Scenarios**: S1, S1b, S1c, S2 (all scenarios)
 **Repetitions**: K=3 per scenario
 **Total Runs**: 48
 
@@ -14,7 +14,7 @@
 
 This is the **definitive benchmark run** with:
 - ✅ **Parallel execution** (no position bias)
-- ✅ **All scenarios** (T1-T4 combined)
+- ✅ **All scenarios** (S1-S2 combined)
 - ✅ **True performance** measurements
 
 ### Overall Winner: 🥇 Claude Sdk
@@ -41,7 +41,7 @@ This is the **definitive benchmark run** with:
 
 ## Per-Scenario Performance
 
-### T1: Damaged Laptop Refund
+### S1: Damaged Laptop Refund
 
 | Framework | Correctness | Latency | Consistency |
 |-----------|-------------|---------|-------------|
@@ -50,7 +50,7 @@ This is the **definitive benchmark run** with:
 | Google Adk | 100.00% | 14.32s | 100% |
 | Crewai | 100.00% | 17.83s | 100% |
 
-### T2: Shipping Address Change
+### S1b: Shipping Address Change
 
 | Framework | Correctness | Latency | Consistency |
 |-----------|-------------|---------|-------------|
@@ -59,7 +59,7 @@ This is the **definitive benchmark run** with:
 | Google Adk | 89.00% | 11.77s | 0% |
 | Crewai | 67.00% | 13.24s | 0% |
 
-### T3: Billing Dispute Escalation
+### S1c: Billing Dispute Escalation
 
 | Framework | Correctness | Latency | Consistency |
 |-----------|-------------|---------|-------------|
@@ -68,7 +68,7 @@ This is the **definitive benchmark run** with:
 | Google Adk | 75.00% | 13.93s | 100% |
 | Crewai | 75.00% | 17.85s | 100% |
 
-### T4: The Frustrated Premium Customer (Complex)
+### S2: The Frustrated Premium Customer (Complex)
 
 | Framework | Correctness | Latency | Consistency |
 |-----------|-------------|---------|-------------|
@@ -87,7 +87,7 @@ This is the **definitive benchmark run** with:
 - True parallel performance comparison
 
 ### 2. Complete Coverage ✅
-- All 4 scenarios tested (T1-T4)
+- All 4 scenarios tested (S1-S2)
 - Simple + Complex scenarios
 - Comprehensive framework evaluation
 
@@ -117,8 +117,8 @@ This is the **definitive benchmark run** with:
 - **Consistency**: 100%
 
 **Performance by Complexity**:
-- Simple scenarios (T1-T3): 91.67%
-- Complex scenarios (T4): 79.33%
+- Simple scenarios (S1-S1c): 91.67%
+- Complex scenarios (S2): 79.33%
 
 ### 🥈 Aws Strands
 - **Overall Correctness**: 84.25%
@@ -126,8 +126,8 @@ This is the **definitive benchmark run** with:
 - **Consistency**: 75%
 
 **Performance by Complexity**:
-- Simple scenarios (T1-T3): 91.67%
-- Complex scenarios (T4): 62.00%
+- Simple scenarios (S1-S1c): 91.67%
+- Complex scenarios (S2): 62.00%
 
 ### 🥉 Google Adk
 - **Overall Correctness**: 83.67%
@@ -135,13 +135,13 @@ This is the **definitive benchmark run** with:
 - **Consistency**: 50%
 
 **Performance by Complexity**:
-- Simple scenarios (T1-T3): 88.00%
-- Complex scenarios (T4): 70.67%
+- Simple scenarios (S1-S1c): 88.00%
+- Complex scenarios (S2): 70.67%
 
 ---
 
 **Report Generated**: 2026-03-13 10:58:09
 **Status**: ✅ Complete
 **Total Frameworks**: 4
-**Total Scenarios**: 4 (T1-T4)
+**Total Scenarios**: 4 (S1-S2)
 **Total Runs**: 48

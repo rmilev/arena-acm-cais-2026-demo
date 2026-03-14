@@ -103,7 +103,7 @@ def run_iteration(iteration_number: int):
             "scenarios": {}
         }
 
-        for scenario_id in ["T1", "T2", "T3"]:
+        for scenario_id in ["S1", "S1b", "S1c"]:
             print(f"\n--- Scenario {scenario_id} ---")
             runs = []
 

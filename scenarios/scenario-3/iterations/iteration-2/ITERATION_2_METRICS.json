@@ -3,7 +3,7 @@
     "lines_of_code": 113,
     "cyclomatic_complexity": 3.2,
     "scenarios": {
-      "T5": {
+      "S3": {
         "median_latency": 32.32,
         "median_input_tokens": 0,
         "median_output_tokens": 0,
@@ -22,7 +22,7 @@
     "lines_of_code": 228,
     "cyclomatic_complexity": 2.0,
     "scenarios": {
-      "T5": {
+      "S3": {
         "median_latency": 81.52,
         "median_input_tokens": 0,
         "median_output_tokens": 0,
@@ -41,7 +41,7 @@
     "lines_of_code": 236,
     "cyclomatic_complexity": 3.0,
     "scenarios": {
-      "T5": {
+      "S3": {
         "median_latency": 24.6,
         "median_input_tokens": 0,
         "median_output_tokens": 0,
@@ -60,7 +60,7 @@
     "lines_of_code": 267,
     "cyclomatic_complexity": 6.6,
     "scenarios": {
-      "T5": {
+      "S3": {
         "median_latency": 51.21,
         "median_input_tokens": 0,
         "median_output_tokens": 0,

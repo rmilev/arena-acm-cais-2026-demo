@@ -2,7 +2,7 @@
 
 **Status**: ✅ Implementation Complete, Ready for Testing
 **Created**: March 13, 2026
-**Test Case**: T5
+**Test Case**: S3
 
 ---
 
@@ -57,7 +57,7 @@ This scenario tests:
 
 ---
 
-## Test Case: T5
+## Test Case: S3
 
 ### Customer Request
 
@@ -112,7 +112,7 @@ Can you help me put together a complete setup?
 - `process_refund` - Refund processing
 - `escalate_to_human` - Escalation
 
-### New Tools for T5 (3)
+### New Tools for S3 (3)
 - `get_product_catalog` - Product catalog by category (laptops, monitors, keyboards, bundles)
 - `calculate_discount` - Discount calculation based on tier and spending
 - `check_inventory` - Product availability and delivery estimates
@@ -224,7 +224,7 @@ arena/frameworks/
 
 arena/
 ├── mcp_server_v2.py                  # Extended MCP server (8 tools)
-└── scenarios.py                      # Updated with T5
+└── scenarios.py                      # Updated with S3
 
 scripts/
 └── run_scenario3.py                  # Benchmark runner
@@ -234,19 +234,19 @@ scripts/
 
 ## Key Differences from Scenario-1 & Scenario-2
 
-### Scenario-1 (T1/T2/T3)
+### Scenario-1 (S1/S1b/S1c)
 - **Complexity**: Simple, single-issue
 - **Tool Calls**: 3-4
 - **Agent Type**: Single agent
 - **Focus**: Basic competency
 
-### Scenario-2 (T4)
+### Scenario-2 (S2)
 - **Complexity**: Complex, multi-issue
 - **Tool Calls**: 8
 - **Agent Type**: Single agent with context management
 - **Focus**: Context handling
 
-### Scenario-3 (T5)
+### Scenario-3 (S3)
 - **Complexity**: Very complex, multi-faceted
 - **Tool Calls**: 12-15
 - **Agent Type**: **Multiple specialized sub-agents**

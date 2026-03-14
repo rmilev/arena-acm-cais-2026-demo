@@ -1,4 +1,4 @@
-"""LangGraph Multi-Agent Implementation for Scenario-3 (T5) using LangGraph framework."""
+"""LangGraph Multi-Agent Implementation for Scenario-3 (S3) using LangGraph framework."""
 from .base import BaseAgent, AgentResult
 import time
 from datetime import datetime

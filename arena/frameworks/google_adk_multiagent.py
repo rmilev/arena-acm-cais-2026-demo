@@ -1,4 +1,4 @@
-"""Google ADK Multi-Agent Implementation for Scenario-3 (T5) using Google ADK framework."""
+"""Google ADK Multi-Agent Implementation for Scenario-3 (S3) using Google ADK framework."""
 from .base import BaseAgent, AgentResult
 import time
 from datetime import datetime

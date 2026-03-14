@@ -23,7 +23,7 @@
 
 ## Detailed Results
 
-### Scenario T1: Damaged Laptop Refund
+### Scenario S1: Damaged Laptop Refund
 
 | Framework | Latency | Tokens (In/Out) | Cost | Correctness | Pass³ |
 |-----------|---------|-----------------|------|-------------|-------|
@@ -36,7 +36,7 @@
 
 ---
 
-### Scenario T2: Shipping Address Change
+### Scenario S1b: Shipping Address Change
 
 | Framework | Latency | Tokens (In/Out) | Cost | Correctness | Pass³ |
 |-----------|---------|-----------------|------|-------------|-------|
@@ -50,7 +50,7 @@
 
 ---
 
-### Scenario T3: Billing Dispute
+### Scenario S1c: Billing Dispute
 
 | Framework | Latency | Tokens (In/Out) | Cost | Correctness | Pass³ |
 |-----------|---------|-----------------|------|-------------|-------|

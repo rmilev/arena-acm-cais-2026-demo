@@ -1,6 +1,6 @@
 {
   "framework": "Google ADK (Multi-Agent)",
-  "scenario": "T5",
+  "scenario": "S3",
   "success": true,
   "correctness_score": 85.0,
   "latency": 27.094824075698853,

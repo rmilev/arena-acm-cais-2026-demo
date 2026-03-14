@@ -41,7 +41,7 @@ def measure_code_complexity(filepath: str) -> dict:
 # ---------------------------------------------------------------------------
 # Metric 2: Step Efficiency Ratio
 # ---------------------------------------------------------------------------
-OPTIMAL_STEPS = {"T1": 3, "T2": 3, "T3": 4, "T4": 8, "T5": 12}
+OPTIMAL_STEPS = {"S1": 3, "S1b": 3, "S1c": 4, "S2": 8, "S3": 12}
 
 
 def compute_step_efficiency(scenario_id: str, tool_log: list[str]) -> dict:

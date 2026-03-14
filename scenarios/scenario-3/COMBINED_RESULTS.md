@@ -1,7 +1,7 @@
 # Arena Scenario-3 Combined Results
 
 **Date**: 2026-03-13 16:17:26
-**Scenario**: T5 (Multi-Agent Product Investigation)
+**Scenario**: S3 (Multi-Agent Product Investigation)
 **Iterations**: 2
 **Total Runs**: 8
 

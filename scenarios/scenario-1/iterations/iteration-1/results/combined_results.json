@@ -14,7 +14,7 @@
       "lines_of_code": 114,
       "cyclomatic_complexity": 2.1,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 12.03,
           "median_input_tokens": 4492,
           "median_output_tokens": 383,
@@ -23,7 +23,7 @@
           "consistency_pass3": 1.0,
           "per_run_correctness": [1.0, 1.0, 1.0]
         },
-        "T2": {
+        "S1b": {
           "median_latency": 15.19,
           "median_input_tokens": 4494,
           "median_output_tokens": 511,
@@ -32,7 +32,7 @@
           "consistency_pass3": 1.0,
           "per_run_correctness": [1.0, 1.0, 1.0]
         },
-        "T3": {
+        "S1c": {
           "median_latency": 14.6,
           "median_input_tokens": 4578,
           "median_output_tokens": 537,
@@ -47,7 +47,7 @@
       "lines_of_code": 140,
       "cyclomatic_complexity": 2.2,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 10.83,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -56,7 +56,7 @@
           "consistency_pass3": 1.0,
           "per_run_correctness": [1.0, 1.0, 1.0]
         },
-        "T2": {
+        "S1b": {
           "median_latency": 13.9,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -65,7 +65,7 @@
           "consistency_pass3": 1.0,
           "per_run_correctness": [1.0, 1.0, 1.0]
         },
-        "T3": {
+        "S1c": {
           "median_latency": 16.46,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -81,7 +81,7 @@
       "lines_of_code": 158,
       "cyclomatic_complexity": 2.0,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 10.83,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -90,7 +90,7 @@
           "consistency_pass3": 1.0,
           "per_run_correctness": [1.0, 1.0, 1.0]
         },
-        "T2": {
+        "S1b": {
           "median_latency": 13.09,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -99,7 +99,7 @@
           "consistency_pass3": 1.0,
           "per_run_correctness": [1.0, 1.0, 1.0]
         },
-        "T3": {
+        "S1c": {
           "median_latency": 13.1,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -115,7 +115,7 @@
       "lines_of_code": 145,
       "cyclomatic_complexity": 1.6,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 13.16,
           "median_input_tokens": 4687,
           "median_output_tokens": 444,
@@ -124,7 +124,7 @@
           "consistency_pass3": 1.0,
           "per_run_correctness": [1.0, 1.0, 1.0]
         },
-        "T2": {
+        "S1b": {
           "median_latency": 11.6,
           "median_input_tokens": 2794,
           "median_output_tokens": 465,
@@ -133,7 +133,7 @@
           "consistency_pass3": 0.0,
           "per_run_correctness": [0.67, 0.67, 0.67]
         },
-        "T3": {
+        "S1c": {
           "median_latency": 17.05,
           "median_input_tokens": 4728,
           "median_output_tokens": 767,

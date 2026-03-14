@@ -1,6 +1,6 @@
 {
   "framework": "AWS Strands (Multi-Agent)",
-  "scenario": "T5",
+  "scenario": "S3",
   "success": true,
   "correctness_score": 77.0,
   "latency": 48.74061989784241,

@@ -17,7 +17,7 @@
 
 ---
 
-## Scenario T1: Damaged Laptop Refund
+## Scenario S1: Damaged Laptop Refund
 **Expected**: `get_customer` → `get_orders` → `process_refund`
 
 | Framework | Latency (s) | Input Tokens | Output Tokens | Cost ($) | Step Eff. | Correctness | Pass³ |
@@ -32,7 +32,7 @@
 
 ---
 
-## Scenario T2: Shipping Address Change
+## Scenario S1b: Shipping Address Change
 **Expected**: `get_customer` → `get_orders` → `search_knowledge_base` (no refund/escalation)
 
 | Framework | Latency (s) | Input Tokens | Output Tokens | Cost ($) | Step Eff. | Correctness | Pass³ |
@@ -47,7 +47,7 @@
 
 ---
 
-## Scenario T3: Billing Dispute / Double Charge
+## Scenario S1c: Billing Dispute / Double Charge
 **Expected**: `get_customer` → `get_orders` → `search_knowledge_base` → `escalate_to_human`
 
 | Framework | Latency (s) | Input Tokens | Output Tokens | Cost ($) | Step Eff. | Correctness | Pass³ |

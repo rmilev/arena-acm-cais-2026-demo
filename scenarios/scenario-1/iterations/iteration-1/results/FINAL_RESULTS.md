@@ -21,7 +21,7 @@ All 4 frameworks successfully completed the benchmark with Claude Sonnet 4.5 on 
 
 ## Detailed Performance Metrics
 
-### Scenario T1: Damaged Laptop Refund
+### Scenario S1: Damaged Laptop Refund
 **Task**: Customer reports damaged laptop, requests refund
 **Optimal Path**: `get_customer` → `get_orders` → `process_refund`
 
@@ -38,7 +38,7 @@ CrewAI         13.16s     4,687 / 444        $0.0207    100%         ✅ 1.00
 
 ---
 
-### Scenario T2: Shipping Address Change
+### Scenario S1b: Shipping Address Change
 **Task**: Customer wants to update default shipping address
 **Optimal Path**: `get_customer` → `get_orders` → `search_knowledge_base`
 
@@ -56,7 +56,7 @@ Claude SDK     15.19s     4,494 / 511        $0.0211    100%         ✅ 1.00
 
 ---
 
-### Scenario T3: Billing Dispute (Double Charge)
+### Scenario S1c: Billing Dispute (Double Charge)
 **Task**: Customer charged twice, needs escalation
 **Optimal Path**: `get_customer` → `get_orders` → `search_knowledge_base` → `escalate_to_human`
 

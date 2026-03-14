@@ -1,6 +1,6 @@
 {
   "framework": "Claude SDK (with Skill)",
-  "scenario": "T5",
+  "scenario": "S3",
   "success": true,
   "correctness_score": 85.0,
   "latency": 28.986170768737793,

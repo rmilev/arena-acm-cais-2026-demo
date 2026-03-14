@@ -91,7 +91,7 @@
 
 ## Per-Scenario Reproducibility
 
-### T1: Damaged Laptop Refund
+### S1: Damaged Laptop Refund
 
 | Framework | Iter 1 Correct | Iter 2 Correct | Variance |
 |-----------|---------------|----------------|----------|
@@ -100,11 +100,11 @@
 | **Google ADK** | 100.00% | 100.00% | ✅ 0.00% |
 | **CrewAI** | 100.00% | 100.00% | ✅ 0.00% |
 
-**Status**: ✅ All frameworks perfect on T1 (simplest scenario)
+**Status**: ✅ All frameworks perfect on S1 (simplest scenario)
 
 ---
 
-### T2: Shipping Address Change
+### S1b: Shipping Address Change
 
 | Framework | Iter 1 Correct | Iter 2 Correct | Variance |
 |-----------|---------------|----------------|----------|
@@ -113,11 +113,11 @@
 | **Google ADK** | 100.00% | 89.00% | ⚠️ -11.00% |
 | **CrewAI** | 78.00% | 67.00% | ⚠️ -11.00% |
 
-**Status**: ⚠️ Google ADK and CrewAI show variance on T2
+**Status**: ⚠️ Google ADK and CrewAI show variance on S1b
 
 ---
 
-### T3: Billing Dispute Escalation
+### S1c: Billing Dispute Escalation
 
 | Framework | Iter 1 Correct | Iter 2 Correct | Variance |
 |-----------|---------------|----------------|----------|
@@ -126,11 +126,11 @@
 | **Google ADK** | 75.00% | 75.00% | ✅ 0.00% |
 | **CrewAI** | 75.00% | 75.00% | ✅ 0.00% |
 
-**Status**: ✅ All frameworks consistent on T3
+**Status**: ✅ All frameworks consistent on S1c
 
 ---
 
-### T4: The Frustrated Premium Customer (Complex)
+### S2: The Frustrated Premium Customer (Complex)
 
 | Framework | Iter 1 Correct | Iter 2 Correct | Variance |
 |-----------|---------------|----------------|----------|
@@ -149,7 +149,7 @@
 
 - **0.00% variance** in overall correctness (88.58% both iterations)
 - **100% consistency** in both iterations (all scenarios)
-- **0.00% variance** per scenario (T1-T4 identical)
+- **0.00% variance** per scenario (S1-S2 identical)
 - **Most reliable** framework confirmed
 
 ### 2. AWS Strands: Perfect Correctness Reproducibility ✅
@@ -162,14 +162,14 @@
 
 - **1.24% std dev** (85.42% → 83.67%)
 - Consistency declined (75% → 50%)
-- Shows some variability in T2 and T4
+- Shows some variability in S1b and S2
 - Still within acceptable range
 
 ### 4. CrewAI: Good Reproducibility ✅
 
 - **1.94% std dev** (82.00% → 79.25%)
 - Stable 75% consistency
-- Minor variance in T2 scenario
+- Minor variance in S1b scenario
 
 ---
 

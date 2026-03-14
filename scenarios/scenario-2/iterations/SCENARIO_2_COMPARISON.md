@@ -2,7 +2,7 @@
 
 **Date**: March 13, 2026
 **Purpose**: Validate reproducibility and analyze prompt caching effects
-**Test**: T4 - The Frustrated Premium Customer (Complex Multi-Issue)
+**Test**: S2 - The Frustrated Premium Customer (Complex Multi-Issue)
 
 ---
 
@@ -162,7 +162,7 @@
 - Iteration 1: [38%, 50%, 50%] - Low and inconsistent
 - Iteration 2: [50%, 75%, 62%] - Improved but still inconsistent
 
-**Conclusion**: Google ADK struggles with T4 complexity, results unstable
+**Conclusion**: Google ADK struggles with S2 complexity, results unstable
 
 ---
 

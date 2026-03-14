@@ -1,10 +1,10 @@
 {
   "framework": "AWS Strands (Multi-Agent)",
-  "scenario": "T5",
-  "run_number": 2,
-  "timestamp": "2026-03-13T16:16:01.920658",
+  "scenario": "S3",
+  "run_number": 1,
+  "timestamp": "2026-03-13T16:02:56.852435",
   "correctness_score": 77.0,
-  "latency": 51.20636701583862,
+  "latency": 49.91717720031738,
   "tool_calls": [
     "search_knowledge_base",
     "search_knowledge_base",
@@ -22,11 +22,11 @@
   "tool_count": 12,
   "unique_tools": [
     "calculate_discount",
-    "get_orders",
-    "search_knowledge_base",
-    "get_customer",
     "check_inventory",
-    "get_product_catalog"
+    "get_orders",
+    "get_customer",
+    "get_product_catalog",
+    "search_knowledge_base"
   ],
   "token_usage": {
     "input_tokens": 0,

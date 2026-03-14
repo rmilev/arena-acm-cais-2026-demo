@@ -156,7 +156,7 @@ Available tools:
 - Lower consistency (67% pass³) due to S2 knowledge base skipping
 - Event loop conflicts resolved with ThreadPoolExecutor pattern
 
-### Scenario T3
+### Scenario S1c
 - All frameworks consistently skipped `search_knowledge_base` tool
 - Resulted in 75% correctness (3/4 checks) for all frameworks
 - Suggests system prompt or scenario may need clarification

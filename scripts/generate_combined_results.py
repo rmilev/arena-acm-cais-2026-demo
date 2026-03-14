@@ -91,7 +91,7 @@ def generate_comparison_report():
     report = []
     report.append(f"# Arena Scenario-3 Combined Results")
     report.append(f"\n**Date**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-    report.append(f"**Scenario**: T5 (Multi-Agent Product Investigation)")
+    report.append(f"**Scenario**: S3 (Multi-Agent Product Investigation)")
     report.append(f"**Iterations**: 2")
     report.append(f"**Total Runs**: {len(iter1_results) + len(iter2_results)}")
     report.append(f"\n---\n")

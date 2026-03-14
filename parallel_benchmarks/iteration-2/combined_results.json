@@ -19,7 +19,7 @@
       "lines_of_code": 72,
       "cyclomatic_complexity": 3.0,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 19.0,
           "median_input_tokens": 15,
           "median_output_tokens": 443,
@@ -34,7 +34,7 @@
           "avg_correctness": 1.0,
           "std_correctness": 0.0
         },
-        "T2": {
+        "S1b": {
           "median_latency": 17.12,
           "median_input_tokens": 16,
           "median_output_tokens": 486,
@@ -49,7 +49,7 @@
           "avg_correctness": 1.0,
           "std_correctness": 0.0
         },
-        "T3": {
+        "S1c": {
           "median_latency": 18.04,
           "median_input_tokens": 15,
           "median_output_tokens": 524,
@@ -64,7 +64,7 @@
           "avg_correctness": 0.75,
           "std_correctness": 0.0
         },
-        "T4": {
+        "S2": {
           "median_latency": 29.75,
           "median_input_tokens": 19,
           "median_output_tokens": 1098,
@@ -87,7 +87,7 @@
       "lines_of_code": 140,
       "cyclomatic_complexity": 2.2,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 16.96,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -102,7 +102,7 @@
           "avg_correctness": 1.0,
           "std_correctness": 0.0
         },
-        "T2": {
+        "S1b": {
           "median_latency": 14.15,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -117,7 +117,7 @@
           "avg_correctness": 1.0,
           "std_correctness": 0.0
         },
-        "T3": {
+        "S1c": {
           "median_latency": 14.59,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -132,7 +132,7 @@
           "avg_correctness": 0.75,
           "std_correctness": 0.0
         },
-        "T4": {
+        "S2": {
           "median_latency": 23.93,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -155,7 +155,7 @@
       "lines_of_code": 158,
       "cyclomatic_complexity": 2.0,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 14.32,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -170,7 +170,7 @@
           "avg_correctness": 1.0,
           "std_correctness": 0.0
         },
-        "T2": {
+        "S1b": {
           "median_latency": 11.77,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -185,7 +185,7 @@
           "avg_correctness": 0.89,
           "std_correctness": 0.1905
         },
-        "T3": {
+        "S1c": {
           "median_latency": 13.93,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -200,7 +200,7 @@
           "avg_correctness": 0.75,
           "std_correctness": 0.0
         },
-        "T4": {
+        "S2": {
           "median_latency": 18.58,
           "median_input_tokens": 0,
           "median_output_tokens": 0,
@@ -223,7 +223,7 @@
       "lines_of_code": 145,
       "cyclomatic_complexity": 1.6,
       "scenarios": {
-        "T1": {
+        "S1": {
           "median_latency": 17.83,
           "median_input_tokens": 4687,
           "median_output_tokens": 444,
@@ -238,7 +238,7 @@
           "avg_correctness": 1.0,
           "std_correctness": 0.0
         },
-        "T2": {
+        "S1b": {
           "median_latency": 13.24,
           "median_input_tokens": 2794,
           "median_output_tokens": 479,
@@ -253,7 +253,7 @@
           "avg_correctness": 0.67,
           "std_correctness": 0.0
         },
-        "T3": {
+        "S1c": {
           "median_latency": 17.85,
           "median_input_tokens": 4728,
           "median_output_tokens": 771,
@@ -268,7 +268,7 @@
           "avg_correctness": 0.75,
           "std_correctness": 0.0
         },
-        "T4": {
+        "S2": {
           "median_latency": 19.09,
           "median_input_tokens": 5354,
           "median_output_tokens": 901,

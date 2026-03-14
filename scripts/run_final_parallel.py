@@ -2,7 +2,7 @@
 """
 Run Final Parallel Benchmark - All Frameworks × All Scenarios
 
-This script runs all 4 frameworks in parallel, each executing all 4 scenarios (T1-T4).
+This script runs all 4 frameworks in parallel, each executing all 4 scenarios (S1-S2).
 This eliminates position bias and provides true parallel performance comparison.
 
 Usage:
@@ -22,7 +22,7 @@ sys.path.insert(0, str(Path(__file__).parent.parent))
 
 
 def run_framework_all_scenarios(framework_name: str) -> Dict[str, Any]:
-    """Run all scenarios (T1-T4) for a single framework."""
+    """Run all scenarios (S1-S2) for a single framework."""
     print(f"[{framework_name}] Starting parallel execution...")
 
     from arena.scenarios import SYSTEM_PROMPT, SCENARIOS
@@ -74,8 +74,8 @@ def run_framework_all_scenarios(framework_name: str) -> Dict[str, Any]:
 
     K = 3  # repetitions per scenario
 
-    # Run all scenarios (T1-T4)
-    scenario_ids = ["T1", "T2", "T3", "T4"]
+    # Run all scenarios (S1-S2)
+    scenario_ids = ["S1", "S1b", "S1c", "S2"]
 
     for scenario_id in scenario_ids:
         print(f"[{framework_name}] Running {scenario_id}...")
@@ -165,13 +165,13 @@ def run_parallel_benchmark(iteration_number: int = None):
 
     print(f"\n{'='*80}")
     print(f"PARALLEL BENCHMARK - ITERATION {iteration_number}")
-    print("All Frameworks × All Scenarios (T1-T4)")
+    print("All Frameworks × All Scenarios (S1-S2)")
     print(f"{'='*80}\n")
 
     framework_names = ["claude_sdk", "aws_strands", "google_adk", "crewai"]
 
     print(f"Starting {len(framework_names)} frameworks in parallel...")
-    print(f"Each framework will run all 4 scenarios (T1-T4) with K=3 repetitions")
+    print(f"Each framework will run all 4 scenarios (S1-S2) with K=3 repetitions")
     print(f"Total runs: {len(framework_names)} frameworks × 4 scenarios × 3 reps = {len(framework_names) * 4 * 3} runs\n")
 
     start_time = time.perf_counter()
@@ -254,7 +254,7 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
 
         scenario_breakdown = {}
 
-        for scenario_id in ["T1", "T2", "T3", "T4"]:
+        for scenario_id in ["S1", "S1b", "S1c", "S2"]:
             s_data = scenarios.get(scenario_id, {})
             if not s_data:
                 continue
@@ -292,7 +292,7 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
         f"**Iteration**: {iteration_number}",
         f"**Execution Mode**: Parallel (all frameworks simultaneously)",
         f"**Total Wall-Clock Time**: {results.get('total_wall_clock_time', 0):.2f}s",
-        f"**Scenarios**: T1, T2, T3, T4 (all scenarios)",
+        f"**Scenarios**: S1, S1b, S1c, S2 (all scenarios)",
         f"**Repetitions**: K=3 per scenario",
         f"**Total Runs**: {len(frameworks) * 4 * 3}",
         "",
@@ -302,7 +302,7 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
         "",
         "This is the **definitive benchmark run** with:",
         "- ✅ **Parallel execution** (no position bias)",
-        "- ✅ **All scenarios** (T1-T4 combined)",
+        "- ✅ **All scenarios** (S1-S2 combined)",
         "- ✅ **True performance** measurements",
         "",
     ]
@@ -351,12 +351,12 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
     ])
 
     # Add per-scenario breakdown
-    for scenario_id in ["T1", "T2", "T3", "T4"]:
+    for scenario_id in ["S1", "S1b", "S1c", "S2"]:
         scenario_names = {
-            "T1": "Damaged Laptop Refund",
-            "T2": "Shipping Address Change",
-            "T3": "Billing Dispute Escalation",
-            "T4": "The Frustrated Premium Customer (Complex)"
+            "S1": "Damaged Laptop Refund",
+            "S1b": "Shipping Address Change",
+            "S1c": "Billing Dispute Escalation",
+            "S2": "The Frustrated Premium Customer (Complex)"
         }
 
         report.extend([
@@ -398,7 +398,7 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
         "- True parallel performance comparison",
         "",
         "### 2. Complete Coverage ✅",
-        "- All 4 scenarios tested (T1-T4)",
+        "- All 4 scenarios tested (S1-S2)",
         "- Simple + Complex scenarios",
         "- Comprehensive framework evaluation",
         "",
@@ -442,8 +442,8 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
             ])
 
             # Show simple vs complex
-            simple_scenarios = ["T1", "T2", "T3"]
-            complex_scenarios = ["T4"]
+            simple_scenarios = ["S1", "S1b", "S1c"]
+            complex_scenarios = ["S2"]
 
             simple_corr = [stats["scenario_breakdown"].get(s, {}).get("correctness", 0)
                           for s in simple_scenarios
@@ -454,11 +454,11 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
 
             if simple_corr:
                 avg_simple = sum(simple_corr) / len(simple_corr)
-                report.append(f"- Simple scenarios (T1-T3): {avg_simple*100:.2f}%")
+                report.append(f"- Simple scenarios (S1-S1c): {avg_simple*100:.2f}%")
 
             if complex_corr:
                 avg_complex = sum(complex_corr) / len(complex_corr)
-                report.append(f"- Complex scenarios (T4): {avg_complex*100:.2f}%")
+                report.append(f"- Complex scenarios (S2): {avg_complex*100:.2f}%")
 
             report.append("")
 
@@ -468,7 +468,7 @@ def generate_summary_report(results: dict, output_dir: Path, iteration_number: i
         f"**Report Generated**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}",
         f"**Status**: ✅ Complete",
         f"**Total Frameworks**: {len(frameworks)}",
-        f"**Total Scenarios**: 4 (T1-T4)",
+        f"**Total Scenarios**: 4 (S1-S2)",
         f"**Total Runs**: {len(frameworks) * 4 * 3}",
         "",
     ])
@@ -516,7 +516,7 @@ if __name__ == "__main__":
     print("="*80)
     print("\nThis run will:")
     print("  • Execute all 4 frameworks in parallel")
-    print("  • Run all 4 scenarios (T1-T4) per framework")
+    print("  • Run all 4 scenarios (S1-S2) per framework")
     print("  • Eliminate position bias completely")
     print("  • Provide definitive performance comparison")
     print(f"\n{'='*80}\n")

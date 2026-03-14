@@ -1,7 +1,7 @@
 # Scenario-3 Iteration 2 Summary
 
 **Date**: 2026-03-13 16:16:03
-**Scenario**: T5 (Multi-Agent Product Investigation)
+**Scenario**: S3 (Multi-Agent Product Investigation)
 **Repetitions**: 3 per framework
 **Total Runs**: 12
 **Total Time**: 594.07s

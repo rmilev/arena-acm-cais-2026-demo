@@ -2,8 +2,8 @@
 from arena.scenarios import SCENARIOS
 
 
-def evaluate_t1(tool_log: list[str], final_response: str) -> dict:
-    """Score Test T1: Damaged Laptop Refund."""
+def evaluate_s1(tool_log: list[str], final_response: str) -> dict:
+    """Score S1: Damaged Laptop Refund."""
     checks = {
         "looked_up_customer": "get_customer" in tool_log,
         "retrieved_orders": "get_orders" in tool_log,
@@ -17,8 +17,8 @@ def evaluate_t1(tool_log: list[str], final_response: str) -> dict:
     }
 
 
-def evaluate_t2(tool_log: list[str], final_response: str) -> dict:
-    """Score Test T2: Shipping Address Change."""
+def evaluate_s1b(tool_log: list[str], final_response: str) -> dict:
+    """Score S1b: Shipping Address Change."""
     checks = {
         "looked_up_customer": "get_customer" in tool_log,
         "retrieved_orders": "get_orders" in tool_log,
@@ -35,8 +35,8 @@ def evaluate_t2(tool_log: list[str], final_response: str) -> dict:
     }
 
 
-def evaluate_t3(tool_log: list[str], final_response: str) -> dict:
-    """Score Test T3: Double Charge / Billing Dispute."""
+def evaluate_s1c(tool_log: list[str], final_response: str) -> dict:
+    """Score S1c: Double Charge / Billing Dispute."""
     checks = {
         "looked_up_order": "get_orders" in tool_log,
         "searched_kb": "search_knowledge_base" in tool_log,
@@ -50,8 +50,8 @@ def evaluate_t3(tool_log: list[str], final_response: str) -> dict:
     }
 
 
-def evaluate_t4(tool_log: list[str], final_response: str) -> dict:
-    """Score Test T4: The Frustrated Premium Customer (Multi-Issue)."""
+def evaluate_s2(tool_log: list[str], final_response: str) -> dict:
+    """Score S2: The Frustrated Premium Customer (Multi-Issue)."""
     tool_log_str = str(tool_log)
     final_response_lower = final_response.lower()
 
@@ -81,8 +81,8 @@ def evaluate_t4(tool_log: list[str], final_response: str) -> dict:
     }
 
 
-def evaluate_t5(tool_log: list[str], final_response: str) -> dict:
-    """Score Test T5: Multi-Agent Product Investigation & Recommendation."""
+def evaluate_s3(tool_log: list[str], final_response: str) -> dict:
+    """Score S3: Multi-Agent Product Investigation & Recommendation."""
     tool_log_str = str(tool_log)
     final_response_lower = final_response.lower()
 
@@ -124,11 +124,11 @@ def evaluate_t5(tool_log: list[str], final_response: str) -> dict:
 
 
 EVALUATORS = {
-    "T1": evaluate_t1,
-    "T2": evaluate_t2,
-    "T3": evaluate_t3,
-    "T4": evaluate_t4,
-    "T5": evaluate_t5,
+    "S1": evaluate_s1,
+    "S1b": evaluate_s1b,
+    "S1c": evaluate_s1c,
+    "S2": evaluate_s2,
+    "S3": evaluate_s3,
 }
 
 

@@ -80,7 +80,7 @@ With temperature=0, the model produces **deterministic results** for tool callin
 
 ## Detailed Scenario Comparison
 
-### Scenario T1: Damaged Laptop Refund
+### Scenario S1: Damaged Laptop Refund
 
 | Framework | Iter 1 Latency | Iter 2 Latency | Variance | Iter 1 Correct | Iter 2 Correct |
 |-----------|----------------|----------------|----------|----------------|----------------|
@@ -93,7 +93,7 @@ With temperature=0, the model produces **deterministic results** for tool callin
 
 ---
 
-### Scenario T2: Shipping Address Change
+### Scenario S1b: Shipping Address Change
 
 | Framework | Iter 1 Latency | Iter 2 Latency | Variance | Iter 1 Correct | Iter 2 Correct |
 |-----------|----------------|----------------|----------|----------------|----------------|
@@ -106,7 +106,7 @@ With temperature=0, the model produces **deterministic results** for tool callin
 
 ---
 
-### Scenario T3: Billing Dispute
+### Scenario S1c: Billing Dispute
 
 | Framework | Iter 1 Latency | Iter 2 Latency | Variance | Iter 1 Correct | Iter 2 Correct |
 |-----------|----------------|----------------|----------|----------------|----------------|

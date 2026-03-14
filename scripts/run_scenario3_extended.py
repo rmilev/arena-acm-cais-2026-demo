@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Run Scenario-3 (T5) - Multi-Agent Product Investigation & Recommendation - Extended
+Run Scenario-3 (S3) - Multi-Agent Product Investigation & Recommendation - Extended
 
 This script tests all 6 frameworks on the complex multi-agent scenario:
 1. Claude SDK (with Skill)
@@ -91,7 +91,7 @@ def aggregate_framework_metrics(framework_name: str, results: list, scenario_nam
             output_tokens.append(r["token_usage"].get("output_tokens", 0))
 
         # Step efficiency
-        optimal_steps = {"T5": 8, "T4": 8, "T3": 4, "T2": 3, "T1": 3}.get(scenario_name, 8)
+        optimal_steps = {"S3": 8, "S2": 8, "S1c": 4, "S1b": 3, "S1": 3}.get(scenario_name, 8)
         actual_steps = r["tool_calls"]
         if actual_steps > 0:
             efficiency = min(optimal_steps / actual_steps, 1.0)
@@ -218,7 +218,7 @@ def main():
         sys.exit(1)
 
     iteration = int(sys.argv[1])
-    scenario_name = "T5"
+    scenario_name = "S3"
     repetitions = 3  # Run each framework 3 times
 
     print("="*80)
@@ -291,7 +291,7 @@ def main():
     with open(summary_file, 'w') as f:
         f.write(f"# Scenario-3 Extended Iteration {iteration} Summary\n\n")
         f.write(f"**Date**: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}\n")
-        f.write(f"**Scenario**: T5 (Multi-Agent Product Investigation)\n")
+        f.write(f"**Scenario**: S3 (Multi-Agent Product Investigation)\n")
         f.write(f"**Frameworks**: 6\n")
         f.write(f"**Repetitions**: {repetitions} per framework\n")
         f.write(f"**Total Runs**: {len(all_results)}\n")

@@ -2,7 +2,7 @@
 
 **Date**: 2026-03-13
 **Status**: ✅ Complete
-**Scenario**: T4 - The Frustrated Premium Customer (Complex Multi-Issue)
+**Scenario**: S2 - The Frustrated Premium Customer (Complex Multi-Issue)
 
 ---
 
@@ -24,7 +24,7 @@
 
 ## Detailed Results
 
-### T4: The Frustrated Premium Customer
+### S2: The Frustrated Premium Customer
 
 **Customer Issues**:
 1. Damaged laptop #ORD-1234 (needs refund)

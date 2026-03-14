@@ -149,7 +149,7 @@ Results should be similar to Iteration 1 with minor variance:
 
 ### Iteration 1 Detailed Results
 
-#### Scenario T1
+#### Scenario S1
 | Framework | Latency | Tokens (In/Out) | Cost | Correctness | Pass³ |
 |-----------|---------|-----------------|------|-------------|-------|
 | Google ADK | 10.83s | 0*/0* | $0.00* | 100% | 1.00 |
@@ -157,7 +157,7 @@ Results should be similar to Iteration 1 with minor variance:
 | Claude SDK | 12.03s | 4,492/383 | $0.0192 | 100% | 1.00 |
 | CrewAI | 13.16s | 4,687/444 | $0.0207 | 100% | 1.00 |
 
-#### Scenario T2
+#### Scenario S1b
 | Framework | Latency | Tokens (In/Out) | Cost | Correctness | Pass³ |
 |-----------|---------|-----------------|------|-------------|-------|
 | CrewAI | 11.60s | 2,794/465 | $0.0154 | 67% | 0.00 |
@@ -165,7 +165,7 @@ Results should be similar to Iteration 1 with minor variance:
 | AWS Strands | 13.90s | 0*/0* | $0.00* | 100% | 1.00 |
 | Claude SDK | 15.19s | 4,494/511 | $0.0211 | 100% | 1.00 |
 
-#### Scenario T3
+#### Scenario S1c
 | Framework | Latency | Tokens (In/Out) | Cost | Correctness | Pass³ |
 |-----------|---------|-----------------|------|-------------|-------|
 | Google ADK | 13.10s | 0*/0* | $0.00* | 75% | 1.00 |

@@ -1,6 +1,6 @@
 {
   "framework": "CrewAI (Multi-Agent)",
-  "scenario": "T5",
+  "scenario": "S3",
   "run_number": 2,
   "timestamp": "2026-03-13T16:14:39.042174",
   "correctness_score": 85.0,

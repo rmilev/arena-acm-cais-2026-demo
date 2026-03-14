@@ -16,10 +16,11 @@ Guidelines:
 6. Be helpful, empathetic, and concise."""
 
 # Test scenarios
-# T1/T2/T3 = Simple single-issue tests (Scenario-1 directory)
-# T4 = Complex multi-issue test (Scenario-2 directory)
+# S1/S1b/S1c = Simple single-issue tests (Scenario-1 directory)
+# S2 = Complex multi-issue test (Scenario-2 directory)
+# S3 = Multi-agent product investigation (Scenario-3 directory)
 SCENARIOS = {
-    "T1": {
+    "S1": {
         "customer_id": "CUST-001",
         "user_message": "Hi, this is customer CUST-001. I ordered a laptop 3 days ago and it arrived damaged. Order #ORD-1234. I want a refund.",
         "expected_tools": ["get_customer", "get_orders", "process_refund"],
@@ -31,7 +32,7 @@ SCENARIOS = {
             "confirmed_to_customer": 'any(kw in final_response.lower() for kw in ["1299", "1,299", "refund"])',
         }
     },
-    "T2": {
+    "S1b": {
         "customer_id": "CUST-001",
         "user_message": "Hi, I'm customer CUST-001. How do I change my shipping address for an upcoming delivery?",
         "expected_tools": ["get_customer", "get_orders", "search_knowledge_base"],
@@ -46,7 +47,7 @@ SCENARIOS = {
             "did_not_escalate": "escalate_to_human not in tool_log",
         }
     },
-    "T3": {
+    "S1c": {
         "customer_id": "CUST-001",
         "user_message": "Hello, this is customer CUST-001. I was charged twice for my last order #ORD-5678. Can you help?",
         "expected_tools": ["get_customer", "get_orders", "search_knowledge_base", "escalate_to_human"],
@@ -59,7 +60,7 @@ SCENARIOS = {
         }
     },
     # Scenario-2: Complex Multi-Issue
-    "T4": {
+    "S2": {
         "customer_id": "CUST-001",
         "user_message": """Hi, this is customer CUST-001. I'm really frustrated. I have THREE issues:
 
@@ -84,7 +85,7 @@ Can you help me sort all this out?""",
         }
     },
     # Scenario-3: Multi-Agent Product Investigation & Recommendation
-    "T5": {
+    "S3": {
         "customer_id": "CUST-001",
         "user_message": """Hi, this is customer CUST-001. I'm looking to upgrade my home office setup.
 I recently had issues with my laptop #ORD-1234, and I'm wondering:

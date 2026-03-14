@@ -1,6 +1,6 @@
 {
   "framework": "LangChain (Multi-Agent)",
-  "scenario": "T5",
+  "scenario": "S3",
   "success": true,
   "correctness_score": 8.0,
   "latency": 0.0014851093292236328,

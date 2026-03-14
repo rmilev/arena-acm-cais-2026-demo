@@ -1,6 +1,6 @@
 # Arena Scenario-3 Multi-Iteration Analysis
 
-**Scenario**: T5 (Multi-Agent Product Investigation & Recommendation)
+**Scenario**: S3 (Multi-Agent Product Investigation & Recommendation)
 **Test Date**: 2026-03-13
 **Iterations**: 2
 **Repetitions per Framework**: 3 runs each
@@ -308,7 +308,7 @@ Result: 85% (11/13 criteria)
 
 ## Appendix: Test Configuration
 
-**Scenario**: T5 (Multi-Agent Product Investigation)
+**Scenario**: S3 (Multi-Agent Product Investigation)
 **Customer**: CUST-001 (Jane Smith, Premium Tier)
 **Request**:
 1. Refund status for ORD-1234

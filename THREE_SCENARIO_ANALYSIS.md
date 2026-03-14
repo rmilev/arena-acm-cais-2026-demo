@@ -24,15 +24,15 @@ This analysis demonstrates how **model capabilities are superseding the need for
 ┌─────────────┬──────────────────────────────┬──────────────────────────────────────────┐
 │  Scenario   │       Complexity Type        │              Primary Test                │
 ├─────────────┼──────────────────────────────┼──────────────────────────────────────────┤
-│ S1 (T1)     │ Simple Single-Agent          │ Baseline competency validation           │
-│ S2 (T4)     │ Complex Single-Agent         │ Context management & reasoning           │
-│ S3 (T5)     │ Multi-Agent Orchestration    │ Parallel coordination without code       │
+│ S1 (S1)     │ Simple Single-Agent          │ Baseline competency validation           │
+│ S2 (S2)     │ Complex Single-Agent         │ Context management & reasoning           │
+│ S3 (S3)     │ Multi-Agent Orchestration    │ Parallel coordination without code       │
 └─────────────┴──────────────────────────────┴──────────────────────────────────────────┘
 ```
 
 ---
 
-## Scenario 1: Simple Single-Agent Task (T1)
+## Scenario 1: Simple Single-Agent Task (S1)
 
 ### Test Case: Damaged Laptop Refund
 
@@ -68,7 +68,7 @@ This analysis demonstrates how **model capabilities are superseding the need for
 
 ---
 
-## Scenario 2: Complex Single-Agent, Multi-Issue (T4)
+## Scenario 2: Complex Single-Agent, Multi-Issue (S2)
 
 ### Test Case: The Frustrated Premium Customer
 
@@ -123,7 +123,7 @@ AWS Strands       91.67%            62.00%            -29.67% ⚠️
 
 ---
 
-## Scenario 3: Multi-Agent Parallel Orchestration (T5)
+## Scenario 3: Multi-Agent Parallel Orchestration (S3)
 
 ### Test Case: Multi-Faceted Product Investigation
 
@@ -344,9 +344,9 @@ All frameworks showed excellent consistency:
 
 ```
 Total Test Runs: 68
-├── Scenario 1 (T1): 24 runs (2 iterations)
-├── Scenario 2 (T4): 36 runs (3 iterations)
-└── Scenario 3 (T5): 24 runs (2 iterations, just completed)
+├── Scenario 1 (S1): 24 runs (2 iterations)
+├── Scenario 2 (S2): 36 runs (3 iterations)
+└── Scenario 3 (S3): 24 runs (2 iterations, just completed)
 
 Frameworks Tested: 4
 ├── Claude Agent SDK
@@ -396,15 +396,15 @@ This three-scenario benchmark demonstrates a paradigm shift in LLM agent develop
 
 ## Files Generated
 
-### Scenario 1 (T1)
+### Scenario 1 (S1)
 - `scenarios/scenario-1/iterations/iteration-{1,2}/ITERATION_{n}_SUMMARY.md`
 - `scenarios/scenario-1/SCENARIO_1_DESCRIPTION.md`
 
-### Scenario 2 (T4)
+### Scenario 2 (S2)
 - `scenarios/scenario-2/FINAL_ANALYSIS.md`
 - `scenarios/scenario-2/iterations/iteration-{1,2,3}/ITERATION_{n}_SUMMARY.md`
 
-### Scenario 3 (T5)
+### Scenario 3 (S3)
 - `scenarios/scenario-3/iterations/iteration-{1,2}/ITERATION_{n}_SUMMARY.md`
 - `scenarios/scenario-3/iterations/iteration-{1,2}/ITERATION_{n}_METRICS.json`
 - `scenarios/scenario-3/COMBINED_RESULTS.md`
