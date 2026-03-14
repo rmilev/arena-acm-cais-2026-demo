@@ -22,7 +22,7 @@ class CrewAIAdapter(FrameworkAdapter):
         """MCP server setup."""
         self.server_params = StdioServerParameters(
             command=sys.executable,
-            args=["arena/mcp_server.py"],
+            args=["-m", "arena.mcp_server_v2"],
             env=None
         )
 

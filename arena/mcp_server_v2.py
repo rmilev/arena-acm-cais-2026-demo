@@ -357,8 +357,23 @@ def check_inventory(product_id: str) -> str:
     })
 
 
-# --- Utility functions ---
+# --- Admin tools (used by adapters to inspect/reset tool call log) ---
 
+@mcp.tool()
+def arena_get_log() -> str:
+    """Return the tool call log as JSON."""
+    import json
+    return json.dumps(_tool_call_log.copy())
+
+
+@mcp.tool()
+def arena_reset_log() -> str:
+    """Reset the tool call log."""
+    _tool_call_log.clear()
+    return "Log reset"
+
+
+# Keep utility functions for backward compat with multiagent adapters
 def get_tool_log() -> list[str]:
     """Return the tool call log (for testing)."""
     return _tool_call_log.copy()
