@@ -1,4 +1,4 @@
-"""LangChain Multi-Agent Implementation for Scenario-3 (T5) using LangChain framework."""
+"""LangChain Multi-Agent Implementation for Scenario-3 (S3) using LangChain framework."""
 from .base import BaseAgent, AgentResult
 import time
 from datetime import datetime

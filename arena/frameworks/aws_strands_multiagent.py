@@ -1,4 +1,4 @@
-"""AWS Strands Multi-Agent Implementation for Scenario-3 (T5) using AWS Strands framework."""
+"""AWS Strands Multi-Agent Implementation for Scenario-3 (S3) using AWS Strands framework."""
 from .base import BaseAgent, AgentResult
 import time
 from datetime import datetime

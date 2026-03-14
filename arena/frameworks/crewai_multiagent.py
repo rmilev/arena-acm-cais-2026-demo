@@ -1,4 +1,4 @@
-"""CrewAI Multi-Agent Implementation for Scenario-3 (T5) using CrewAI framework."""
+"""CrewAI Multi-Agent Implementation for Scenario-3 (S3) using CrewAI framework."""
 from .base import BaseAgent, AgentResult
 import time
 from datetime import datetime

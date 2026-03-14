@@ -11,195 +11,12 @@
   "frameworks": {
     "claude_sdk": {
       "scenarios": {
-        "T1": {
+        "S3": {
           "per_run_results": [
             {
-              "input_tokens": 12561,
-              "output_tokens": 1111,
-              "total_tokens": 13672,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 23.32,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0543,
-              "final_response": "I'm sorry to hear your laptop arrived damaged! Let me help you with that refund right away. I'll look up your account and order details first.Thank you, Jane! I've pulled up your account and I can see..."
-            },
-            {
-              "input_tokens": 12600,
-              "output_tokens": 1241,
-              "total_tokens": 13841,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 24.4,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0564,
-              "final_response": "I'm sorry to hear your laptop arrived damaged. I'll help you with this right away. Let me look up your account and order details.Thank you for your patience, Jane. I've reviewed your account and order..."
-            },
-            {
-              "input_tokens": 12372,
-              "output_tokens": 922,
-              "total_tokens": 13294,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 19.88,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0509,
-              "final_response": "I'm sorry to hear your laptop arrived damaged. Let me help you with that right away. I'll look up your account and order information.Thank you for your patience, Jane. I've reviewed your account and o..."
-            }
-          ],
-          "median_latency": 23.32,
-          "median_input_tokens": 12561,
-          "median_output_tokens": 1111,
-          "median_cost_usd": 0.0543,
-          "median_step_efficiency": 1.0,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            1.0,
-            1.0,
-            1.0
-          ]
-        },
-        "T4": {
-          "per_run_results": [
-            {
-              "input_tokens": 19180,
-              "output_tokens": 2288,
-              "total_tokens": 21468,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 44.41,
-              "correctness_score": 0.75,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0919,
-              "final_response": "I understand your frustration, and I'm here to help you resolve all three issues. Let me start by looking up your account and order details.Thank you for your patience, Jane. I've pulled up your accou..."
-            },
-            {
-              "input_tokens": 21744,
-              "output_tokens": 2263,
-              "total_tokens": 24007,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "search_knowledge_base",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 42.48,
-              "correctness_score": 0.88,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": true,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0992,
-              "final_response": "I'm so sorry to hear you're experiencing these issues! I completely understand your frustration. Let me help you sort out all three problems. First, let me pull up your customer profile and orders to ..."
-            },
-            {
-              "input_tokens": 22000,
-              "output_tokens": 2448,
-              "total_tokens": 24448,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "search_knowledge_base",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 45.84,
-              "correctness_score": 0.88,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": true,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.1027,
-              "final_response": "I understand your frustration, and I'm here to help you resolve all three issues. Let me start by looking up your account and order details.Thank you for your patience, Jane. I've reviewed your accoun..."
-            }
-          ],
-          "median_latency": 44.41,
-          "median_input_tokens": 21744,
-          "median_output_tokens": 2288,
-          "median_cost_usd": 0.0992,
-          "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            0.75,
-            0.88,
-            0.88
-          ]
-        },
-        "T5": {
-          "per_run_results": [
-            {
-              "input_tokens": 14271,
-              "output_tokens": 1997,
-              "total_tokens": 16268,
+              "input_tokens": 15579,
+              "output_tokens": 2020,
+              "total_tokens": 17599,
               "tool_calls": [
                 "get_customer",
                 "get_orders",
@@ -211,7 +28,7 @@
               "num_tool_calls": 6,
               "optimal_tool_calls": 12,
               "step_efficiency_ratio": 0.5,
-              "latency_seconds": 32.24,
+              "latency_seconds": 34.02,
               "correctness_score": 0.77,
               "correctness_details": {
                 "looked_up_customer": true,
@@ -228,91 +45,20 @@
                 "efficient_tool_usage": true,
                 "logical_sequence": true
               },
-              "cost_usd": 0.0728,
-              "final_response": "I'd be happy to help you upgrade your home office setup! Let me gather all the information you need.Great news, Jane! I have all the information you need. Let me address each of your questions:\n\n## 1...."
-            },
-            {
-              "input_tokens": 23924,
-              "output_tokens": 2085,
-              "total_tokens": 26009,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 7,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.6,
-              "latency_seconds": 37.45,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.103,
-              "final_response": "I'd be happy to help you upgrade your home office setup! Let me gather your information and find the best solutions for you.Great news, Jane! I have all the information you need. Let me address each o..."
-            },
-            {
-              "input_tokens": 20121,
-              "output_tokens": 2448,
-              "total_tokens": 22569,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 39.35,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0971,
-              "final_response": "I'd be happy to help you upgrade your home office setup! Let me gather all the information I need to assist you properly.Now let me gather your customer information and order history:Perfect! I can se..."
+              "cost_usd": 0.077,
+              "final_response": "I'd be happy to help you upgrade your home office setup! Let me gather all the information I need to assist you properly.Now let me gather your information and check on your orders.Great news, Jane! I..."
             }
           ],
-          "median_latency": 37.45,
-          "median_input_tokens": 20121,
-          "median_output_tokens": 2085,
-          "median_cost_usd": 0.0971,
+          "median_latency": 34.02,
+          "median_input_tokens": 15579,
+          "median_output_tokens": 2020,
+          "median_cost_usd": 0.077,
           "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
+          "consistency_pass3": 0.0,
           "per_run_correctness": [
             0.77,
-            0.77,
-            0.77
+            0.0,
+            0.0
           ]
         }
       },
@@ -321,304 +67,54 @@
     },
     "langchain": {
       "scenarios": {
-        "T1": {
+        "S3": {
           "per_run_results": [
             {
-              "input_tokens": 5082,
-              "output_tokens": 424,
-              "total_tokens": 5506,
+              "input_tokens": 8801,
+              "output_tokens": 970,
+              "total_tokens": 9771,
               "tool_calls": [
                 "get_customer",
                 "get_orders",
-                "process_refund"
+                "get_product_catalog",
+                "get_product_catalog",
+                "get_product_catalog",
+                "calculate_discount"
               ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 10.62,
-              "correctness_score": 1.0,
+              "num_tool_calls": 6,
+              "optimal_tool_calls": 12,
+              "step_efficiency_ratio": 0.5,
+              "latency_seconds": 17.96,
+              "correctness_score": 0.77,
               "correctness_details": {
                 "looked_up_customer": true,
                 "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
+                "searched_refund_info": false,
+                "searched_products": false,
+                "used_catalog": true,
+                "confirmed_refund_status": true,
+                "calculated_spending": true,
+                "checked_discounts": true,
+                "addressed_all_questions": true,
+                "provided_recommendations": true,
+                "within_budget": false,
+                "efficient_tool_usage": true,
+                "logical_sequence": true
               },
-              "cost_usd": 0.0216,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium customer,..."
-            },
-            {
-              "input_tokens": 5082,
-              "output_tokens": 424,
-              "total_tokens": 5506,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 13.06,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0216,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium customer,..."
-            },
-            {
-              "input_tokens": 5082,
-              "output_tokens": 424,
-              "total_tokens": 5506,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 11.85,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0216,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium customer,..."
+              "cost_usd": 0.041,
+              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
             }
           ],
-          "median_latency": 11.85,
-          "median_input_tokens": 5082,
-          "median_output_tokens": 424,
-          "median_cost_usd": 0.0216,
-          "median_step_efficiency": 1.0,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            1.0,
-            1.0,
-            1.0
-          ]
-        },
-        "T4": {
-          "per_run_results": [
-            {
-              "input_tokens": 5668,
-              "output_tokens": 744,
-              "total_tokens": 6412,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 17.92,
-              "correctness_score": 0.5,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0282,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop refund (ORD-1234):** Already processing - $1,299.99 will be refunded to you\n\n\ud83c\udfab **Headphones cancellation & USB hub address change:** Escalated to our Senior Support Team (Tick..."
-            },
-            {
-              "input_tokens": 5668,
-              "output_tokens": 744,
-              "total_tokens": 6412,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 17.66,
-              "correctness_score": 0.5,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0282,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop refund (ORD-1234):** Already processing - $1,299.99 will be refunded to you\n\n\ud83c\udfab **Headphones cancellation & USB hub address change:** Escalated to our Senior Support Team (Tick..."
-            },
-            {
-              "input_tokens": 5668,
-              "output_tokens": 744,
-              "total_tokens": 6412,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 16.21,
-              "correctness_score": 0.5,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0282,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop refund (ORD-1234):** Already processing - $1,299.99 will be refunded to you\n\n\ud83c\udfab **Headphones cancellation & USB hub address change:** Escalated to our Senior Support Team (Tick..."
-            }
-          ],
-          "median_latency": 17.66,
-          "median_input_tokens": 5668,
-          "median_output_tokens": 744,
-          "median_cost_usd": 0.0282,
-          "median_step_efficiency": 0.4,
+          "median_latency": 17.96,
+          "median_input_tokens": 8801,
+          "median_output_tokens": 970,
+          "median_cost_usd": 0.041,
+          "median_step_efficiency": 0.5,
           "consistency_pass3": 0.0,
           "per_run_correctness": [
-            0.5,
-            0.5,
-            0.5
-          ]
-        },
-        "T5": {
-          "per_run_results": [
-            {
-              "input_tokens": 8801,
-              "output_tokens": 944,
-              "total_tokens": 9745,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 17.53,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0406,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
-            },
-            {
-              "input_tokens": 8801,
-              "output_tokens": 944,
-              "total_tokens": 9745,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 17.19,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0406,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
-            },
-            {
-              "input_tokens": 8801,
-              "output_tokens": 1114,
-              "total_tokens": 9915,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 20.15,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0431,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
-            }
-          ],
-          "median_latency": 17.53,
-          "median_input_tokens": 8801,
-          "median_output_tokens": 944,
-          "median_cost_usd": 0.0406,
-          "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
             0.77,
-            0.77,
-            0.77
+            0.0,
+            0.0
           ]
         }
       },
@@ -627,258 +123,8 @@
     },
     "langgraph": {
       "scenarios": {
-        "T1": {
+        "S3": {
           "per_run_results": [
-            {
-              "input_tokens": 5082,
-              "output_tokens": 424,
-              "total_tokens": 5506,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 10.88,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0216,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium customer,..."
-            },
-            {
-              "input_tokens": 5082,
-              "output_tokens": 424,
-              "total_tokens": 5506,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 10.98,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0216,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium customer,..."
-            },
-            {
-              "input_tokens": 5082,
-              "output_tokens": 424,
-              "total_tokens": 5506,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 10.82,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0216,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium customer,..."
-            }
-          ],
-          "median_latency": 10.88,
-          "median_input_tokens": 5082,
-          "median_output_tokens": 424,
-          "median_cost_usd": 0.0216,
-          "median_step_efficiency": 1.0,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            1.0,
-            1.0,
-            1.0
-          ]
-        },
-        "T4": {
-          "per_run_results": [
-            {
-              "input_tokens": 5668,
-              "output_tokens": 744,
-              "total_tokens": 6412,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 17.28,
-              "correctness_score": 0.5,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0282,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop refund (ORD-1234):** Already processing - $1,299.99 will be refunded to you\n\n\ud83c\udfab **Headphones cancellation & USB hub address change:** Escalated to our Senior Support Team (Tick..."
-            },
-            {
-              "input_tokens": 5668,
-              "output_tokens": 744,
-              "total_tokens": 6412,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 16.95,
-              "correctness_score": 0.5,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0282,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop refund (ORD-1234):** Already processing - $1,299.99 will be refunded to you\n\n\ud83c\udfab **Headphones cancellation & USB hub address change:** Escalated to our Senior Support Team (Tick..."
-            },
-            {
-              "input_tokens": 5668,
-              "output_tokens": 744,
-              "total_tokens": 6412,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 16.5,
-              "correctness_score": 0.5,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0282,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop refund (ORD-1234):** Already processing - $1,299.99 will be refunded to you\n\n\ud83c\udfab **Headphones cancellation & USB hub address change:** Escalated to our Senior Support Team (Tick..."
-            }
-          ],
-          "median_latency": 16.95,
-          "median_input_tokens": 5668,
-          "median_output_tokens": 744,
-          "median_cost_usd": 0.0282,
-          "median_step_efficiency": 0.4,
-          "consistency_pass3": 0.0,
-          "per_run_correctness": [
-            0.5,
-            0.5,
-            0.5
-          ]
-        },
-        "T5": {
-          "per_run_results": [
-            {
-              "input_tokens": 8801,
-              "output_tokens": 1114,
-              "total_tokens": 9915,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 19.94,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0431,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
-            },
-            {
-              "input_tokens": 8801,
-              "output_tokens": 1114,
-              "total_tokens": 9915,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 20.25,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0431,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
-            },
             {
               "input_tokens": 8801,
               "output_tokens": 944,
@@ -894,7 +140,7 @@
               "num_tool_calls": 6,
               "optimal_tool_calls": 12,
               "step_efficiency_ratio": 0.5,
-              "latency_seconds": 18.85,
+              "latency_seconds": 18.59,
               "correctness_score": 0.77,
               "correctness_details": {
                 "looked_up_customer": true,
@@ -915,16 +161,16 @@
               "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
             }
           ],
-          "median_latency": 19.94,
+          "median_latency": 18.59,
           "median_input_tokens": 8801,
-          "median_output_tokens": 1114,
-          "median_cost_usd": 0.0431,
+          "median_output_tokens": 944,
+          "median_cost_usd": 0.0406,
           "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
+          "consistency_pass3": 0.0,
           "per_run_correctness": [
             0.77,
-            0.77,
-            0.77
+            0.0,
+            0.0
           ]
         }
       },
@@ -933,190 +179,7 @@
     },
     "aws_strands": {
       "scenarios": {
-        "T1": {
-          "per_run_results": [
-            {
-              "input_tokens": 5235,
-              "output_tokens": 411,
-              "total_tokens": 5646,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 10.21,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0219,
-              "final_response": "Perfect! Your refund has been successfully processed. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium custo..."
-            },
-            {
-              "input_tokens": 5235,
-              "output_tokens": 411,
-              "total_tokens": 5646,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 10.78,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0219,
-              "final_response": "Perfect! Your refund has been successfully processed. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium custo..."
-            },
-            {
-              "input_tokens": 5235,
-              "output_tokens": 411,
-              "total_tokens": 5646,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 11.39,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0219,
-              "final_response": "Perfect! Your refund has been successfully processed. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium custo..."
-            }
-          ],
-          "median_latency": 10.78,
-          "median_input_tokens": 5235,
-          "median_output_tokens": 411,
-          "median_cost_usd": 0.0219,
-          "median_step_efficiency": 1.0,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            1.0,
-            1.0,
-            1.0
-          ]
-        },
-        "T4": {
-          "per_run_results": [
-            {
-              "input_tokens": 8175,
-              "output_tokens": 858,
-              "total_tokens": 9033,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 19.17,
-              "correctness_score": 0.75,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0374,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop (ORD-1234):** Refund of $1,299.99 already processing - expect it in 3-5 business days\n\n\u23f3 **Headphones (ORD-5678):** Escalated to Senior Support Team (Ticket #TICKET-5567) - th..."
-            },
-            {
-              "input_tokens": 8175,
-              "output_tokens": 858,
-              "total_tokens": 9033,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 19.09,
-              "correctness_score": 0.75,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0374,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop (ORD-1234):** Refund of $1,299.99 already processing - expect it in 3-5 business days\n\n\u23f3 **Headphones (ORD-5678):** Escalated to Senior Support Team (Ticket #TICKET-5567) - th..."
-            },
-            {
-              "input_tokens": 8175,
-              "output_tokens": 858,
-              "total_tokens": 9033,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 21.13,
-              "correctness_score": 0.75,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0374,
-              "final_response": "**Summary:**\n\n\u2705 **Laptop (ORD-1234):** Refund of $1,299.99 already processing - expect it in 3-5 business days\n\n\u23f3 **Headphones (ORD-5678):** Escalated to Senior Support Team (Ticket #TICKET-5567) - th..."
-            }
-          ],
-          "median_latency": 19.17,
-          "median_input_tokens": 8175,
-          "median_output_tokens": 858,
-          "median_cost_usd": 0.0374,
-          "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            0.75,
-            0.75,
-            0.75
-          ]
-        },
-        "T5": {
+        "S3": {
           "per_run_results": [
             {
               "input_tokens": 8997,
@@ -1133,77 +196,7 @@
               "num_tool_calls": 6,
               "optimal_tool_calls": 12,
               "step_efficiency_ratio": 0.5,
-              "latency_seconds": 26.56,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0421,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
-            },
-            {
-              "input_tokens": 8997,
-              "output_tokens": 1005,
-              "total_tokens": 10002,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 20.43,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0421,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
-            },
-            {
-              "input_tokens": 8997,
-              "output_tokens": 1005,
-              "total_tokens": 10002,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 20.6,
+              "latency_seconds": 22.53,
               "correctness_score": 0.77,
               "correctness_details": {
                 "looked_up_customer": true,
@@ -1224,16 +217,16 @@
               "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
             }
           ],
-          "median_latency": 20.6,
+          "median_latency": 22.53,
           "median_input_tokens": 8997,
           "median_output_tokens": 1005,
           "median_cost_usd": 0.0421,
           "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
+          "consistency_pass3": 0.0,
           "per_run_correctness": [
             0.77,
-            0.77,
-            0.77
+            0.0,
+            0.0
           ]
         }
       },
@@ -1242,188 +235,7 @@
     },
     "crewai": {
       "scenarios": {
-        "T1": {
-          "per_run_results": [
-            {
-              "input_tokens": 5634,
-              "output_tokens": 506,
-              "total_tokens": 6140,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 18.28,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0245,
-              "final_response": "Hi Jane,\n\nI'm so sorry to hear that your ProBook Laptop 15-inch arrived damaged with a cracked screen. I completely understand how frustrating that must be.\n\nI've reviewed your order #ORD-1234 and hav..."
-            },
-            {
-              "input_tokens": 5634,
-              "output_tokens": 506,
-              "total_tokens": 6140,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 12.29,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0245,
-              "final_response": "Hi Jane,\n\nI'm so sorry to hear that your ProBook Laptop 15-inch arrived damaged with a cracked screen. I completely understand how frustrating that must be.\n\nI've reviewed your order #ORD-1234 and hav..."
-            },
-            {
-              "input_tokens": 5634,
-              "output_tokens": 506,
-              "total_tokens": 6140,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 11.9,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0245,
-              "final_response": "Hi Jane,\n\nI'm so sorry to hear that your ProBook Laptop 15-inch arrived damaged with a cracked screen. I completely understand how frustrating that must be.\n\nI've reviewed your order #ORD-1234 and hav..."
-            }
-          ],
-          "median_latency": 12.29,
-          "median_input_tokens": 5634,
-          "median_output_tokens": 506,
-          "median_cost_usd": 0.0245,
-          "median_step_efficiency": 1.0,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            1.0,
-            1.0,
-            1.0
-          ]
-        },
-        "T4": {
-          "per_run_results": [
-            {
-              "input_tokens": 6068,
-              "output_tokens": 1070,
-              "total_tokens": 7138,
-              "tool_calls": [
-                "get_orders",
-                "get_customer",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 22.46,
-              "correctness_score": 0.75,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0343,
-              "final_response": "Hi Jane,\n\nI completely understand your frustration, and I'm here to help you sort through all three of these issues. Let me address each one:\n\n**1. Damaged Laptop (Order #ORD-1234) \u2713**\nGood news - I c..."
-            },
-            {
-              "input_tokens": 6258,
-              "output_tokens": 1210,
-              "total_tokens": 7468,
-              "tool_calls": [
-                "get_orders",
-                "get_customer",
-                "escalate_to_human",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 26.97,
-              "correctness_score": 0.75,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0369,
-              "final_response": "Hi Jane,\n\nI completely understand your frustration with having multiple issues at once. Let me address each of your concerns:\n\n**1. Damaged Laptop (Order #ORD-1234) - GOOD NEWS \u2713**\n\nI can see that you..."
-            },
-            {
-              "input_tokens": 6068,
-              "output_tokens": 1070,
-              "total_tokens": 7138,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.4,
-              "latency_seconds": 22.03,
-              "correctness_score": 0.75,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0343,
-              "final_response": "Hi Jane,\n\nI completely understand your frustration, and I'm here to help you sort through all three of these issues. Let me address each one:\n\n**1. Damaged Laptop (Order #ORD-1234) \u2713**\nGood news - I c..."
-            }
-          ],
-          "median_latency": 22.46,
-          "median_input_tokens": 6068,
-          "median_output_tokens": 1070,
-          "median_cost_usd": 0.0343,
-          "median_step_efficiency": 0.4,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            0.75,
-            0.75,
-            0.75
-          ]
-        },
-        "T5": {
+        "S3": {
           "per_run_results": [
             {
               "input_tokens": 6701,
@@ -1440,77 +252,7 @@
               "num_tool_calls": 6,
               "optimal_tool_calls": 12,
               "step_efficiency_ratio": 0.5,
-              "latency_seconds": 18.75,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0381,
-              "final_response": "Hi Jane! I'm happy to help you upgrade your home office setup. Let me address all your questions:\n\n**1. Refund Status for Order #ORD-1234:**\nYour refund for the ProBook Laptop 15-inch ($1,299.99) is c..."
-            },
-            {
-              "input_tokens": 6701,
-              "output_tokens": 1199,
-              "total_tokens": 7900,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 20.51,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0381,
-              "final_response": "Hi Jane! I'm happy to help you upgrade your home office setup. Let me address all your questions:\n\n**1. Refund Status for Order #ORD-1234:**\nYour refund for the ProBook Laptop 15-inch ($1,299.99) is c..."
-            },
-            {
-              "input_tokens": 6701,
-              "output_tokens": 1199,
-              "total_tokens": 7900,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 19.55,
+              "latency_seconds": 19.98,
               "correctness_score": 0.77,
               "correctness_details": {
                 "looked_up_customer": true,
@@ -1531,16 +273,16 @@
               "final_response": "Hi Jane! I'm happy to help you upgrade your home office setup. Let me address all your questions:\n\n**1. Refund Status for Order #ORD-1234:**\nYour refund for the ProBook Laptop 15-inch ($1,299.99) is c..."
             }
           ],
-          "median_latency": 19.55,
+          "median_latency": 19.98,
           "median_input_tokens": 6701,
           "median_output_tokens": 1199,
           "median_cost_usd": 0.0381,
           "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
+          "consistency_pass3": 0.0,
           "per_run_correctness": [
             0.77,
-            0.77,
-            0.77
+            0.0,
+            0.0
           ]
         }
       },
@@ -1549,305 +291,54 @@
     },
     "google_adk": {
       "scenarios": {
-        "T1": {
+        "S3": {
           "per_run_results": [
             {
-              "input_tokens": 5238,
-              "output_tokens": 442,
-              "total_tokens": 5680,
+              "input_tokens": 7166,
+              "output_tokens": 1048,
+              "total_tokens": 8214,
               "tool_calls": [
                 "get_customer",
                 "get_orders",
-                "process_refund"
+                "get_product_catalog",
+                "get_product_catalog",
+                "get_product_catalog",
+                "calculate_discount"
               ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 14.17,
-              "correctness_score": 1.0,
+              "num_tool_calls": 6,
+              "optimal_tool_calls": 12,
+              "step_efficiency_ratio": 0.5,
+              "latency_seconds": 19.8,
+              "correctness_score": 0.77,
               "correctness_details": {
                 "looked_up_customer": true,
                 "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
+                "searched_refund_info": false,
+                "searched_products": false,
+                "used_catalog": true,
+                "confirmed_refund_status": true,
+                "calculated_spending": true,
+                "checked_discounts": true,
+                "addressed_all_questions": true,
+                "provided_recommendations": true,
+                "within_budget": false,
+                "efficient_tool_usage": true,
+                "logical_sequence": true
               },
-              "cost_usd": 0.0223,
-              "final_response": "Perfect! Your refund has been successfully processed. Here are the details:\n\n**Refund Confirmation:**\n- Refund ID: REF-8901\n- Amount: $1,299.99\n- Processing time: 1-2 business days (as a premium custo..."
-            },
-            {
-              "input_tokens": 5216,
-              "output_tokens": 438,
-              "total_tokens": 5654,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 12.18,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0222,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Processed:**\n- **Refund ID:** REF-8901\n- **Amount:** $1,299.99\n- **Processing Time:** 1-2 business days (as a premium ..."
-            },
-            {
-              "input_tokens": 5211,
-              "output_tokens": 445,
-              "total_tokens": 5656,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund"
-              ],
-              "num_tool_calls": 3,
-              "optimal_tool_calls": 3,
-              "step_efficiency_ratio": 1.0,
-              "latency_seconds": 11.54,
-              "correctness_score": 1.0,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "processed_refund": true,
-                "confirmed_to_customer": true
-              },
-              "cost_usd": 0.0223,
-              "final_response": "Perfect! I've successfully processed your refund. Here are the details:\n\n**Refund Confirmation:**\n- **Refund ID:** REF-8901\n- **Amount:** $1,299.99\n- **Processing Time:** 1-2 business days (as a premi..."
+              "cost_usd": 0.0372,
+              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for Order #ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for the damaged ProBook Laptop. This typi..."
             }
           ],
-          "median_latency": 12.18,
-          "median_input_tokens": 5216,
-          "median_output_tokens": 442,
-          "median_cost_usd": 0.0223,
-          "median_step_efficiency": 1.0,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
-            1.0,
-            1.0,
-            1.0
-          ]
-        },
-        "T4": {
-          "per_run_results": [
-            {
-              "input_tokens": 3245,
-              "output_tokens": 450,
-              "total_tokens": 3695,
-              "tool_calls": [
-                "get_customer",
-                "get_orders"
-              ],
-              "num_tool_calls": 2,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.2,
-              "latency_seconds": 11.22,
-              "correctness_score": 0.5,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0165,
-              "final_response": "Thank you for your patience, Jane. I can see all three orders. Let me address each issue:\n\n**1. Damaged Laptop (ORD-1234) - GOOD NEWS!**\nI can see that a refund is already being processed for your dam..."
-            },
-            {
-              "input_tokens": 5993,
-              "output_tokens": 945,
-              "total_tokens": 6938,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 22.06,
-              "correctness_score": 0.62,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": false,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": true
-              },
-              "cost_usd": 0.0322,
-              "final_response": "I've made progress on your issues. Here's the status:\n\n**\u2713 Issue #1 - Damaged Laptop:** Refund already processing for $1,299.99\n\n**\u26a0\ufe0f Issue #2 - Headphones Cancellation:** The system won't let me proc..."
-            },
-            {
-              "input_tokens": 5984,
-              "output_tokens": 948,
-              "total_tokens": 6932,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "process_refund",
-                "escalate_to_human"
-              ],
-              "num_tool_calls": 4,
-              "optimal_tool_calls": 8,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 19.99,
-              "correctness_score": 0.62,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_all_orders": true,
-                "handled_damaged_laptop": false,
-                "addressed_cancellation": true,
-                "addressed_address_change": false,
-                "acknowledged_all_issues": true,
-                "correct_order_handling": true,
-                "premium_acknowledgement": false
-              },
-              "cost_usd": 0.0322,
-              "final_response": "**Update on your issues:**\n\n\u2705 **Laptop Refund (ORD-1234)**: Already processing - $1,299.99 refund coming in 3-5 days\n\n\u26a0\ufe0f **Headphones (ORD-5678)**: I encountered an issue processing the cancellation t..."
-            }
-          ],
-          "median_latency": 19.99,
-          "median_input_tokens": 5984,
-          "median_output_tokens": 945,
-          "median_cost_usd": 0.0322,
+          "median_latency": 19.8,
+          "median_input_tokens": 7166,
+          "median_output_tokens": 1048,
+          "median_cost_usd": 0.0372,
           "median_step_efficiency": 0.5,
           "consistency_pass3": 0.0,
           "per_run_correctness": [
-            0.5,
-            0.62,
-            0.62
-          ]
-        },
-        "T5": {
-          "per_run_results": [
-            {
-              "input_tokens": 6344,
-              "output_tokens": 953,
-              "total_tokens": 7297,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 17.33,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0333,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for ORD-1234**\nYour refund of **$1,299.99** is currently **processing** for your damaged ProBook Laptop. This typically ..."
-            },
-            {
-              "input_tokens": 9210,
-              "output_tokens": 1007,
-              "total_tokens": 10217,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 20.63,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0427,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for ORD-1234**\nYour refund of **$1,299.99** for the damaged ProBook Laptop is currently **processing**. This should be c..."
-            },
-            {
-              "input_tokens": 9239,
-              "output_tokens": 1049,
-              "total_tokens": 10288,
-              "tool_calls": [
-                "get_customer",
-                "get_orders",
-                "get_product_catalog",
-                "get_product_catalog",
-                "get_product_catalog",
-                "calculate_discount"
-              ],
-              "num_tool_calls": 6,
-              "optimal_tool_calls": 12,
-              "step_efficiency_ratio": 0.5,
-              "latency_seconds": 19.36,
-              "correctness_score": 0.77,
-              "correctness_details": {
-                "looked_up_customer": true,
-                "retrieved_orders": true,
-                "searched_refund_info": false,
-                "searched_products": false,
-                "used_catalog": true,
-                "confirmed_refund_status": true,
-                "calculated_spending": true,
-                "checked_discounts": true,
-                "addressed_all_questions": true,
-                "provided_recommendations": true,
-                "within_budget": false,
-                "efficient_tool_usage": true,
-                "logical_sequence": true
-              },
-              "cost_usd": 0.0435,
-              "final_response": "Excellent news, Jane! Let me address all your questions:\n\n## 1. **Refund Status for ORD-1234**\nYour refund of **$1,299.99** for the damaged ProBook Laptop is currently **processing**. This typically t..."
-            }
-          ],
-          "median_latency": 19.36,
-          "median_input_tokens": 9210,
-          "median_output_tokens": 1007,
-          "median_cost_usd": 0.0427,
-          "median_step_efficiency": 0.5,
-          "consistency_pass3": 1.0,
-          "per_run_correctness": [
             0.77,
-            0.77,
-            0.77
+            0.0,
+            0.0
           ]
         }
       },
