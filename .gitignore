@@ -7,6 +7,7 @@ temp/
 *.log
 *.pdf
 .DS_STORE
-arena/frameworks/__pycache__/*
-arena/__pycache__/*
+__pycache__/
+*.pyc
+*.egg-info/
 paper/*
