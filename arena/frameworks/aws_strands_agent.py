@@ -1,5 +1,6 @@
 """AWS Strands framework adapter - simplified with direct MCP integration."""
 import os
+import sys
 import asyncio
 import json
 import boto3
@@ -26,7 +27,7 @@ class AWSStrandsAdapter(FrameworkAdapter):
     def connect_to_mcp(self):
         """Set up MCP connection."""
         self.server_params = StdioServerParameters(
-            command="python",
+            command=sys.executable,
             args=["arena/mcp_server.py"],
             env=None
         )
@@ -159,13 +160,13 @@ class AWSStrandsAdapter(FrameworkAdapter):
                     if not response_text:
                         response_text = str(result)
 
-                    # Extract token usage
+                    # Extract token usage from AgentResult.metrics.accumulated_usage
                     self._total_input_tokens = 0
                     self._total_output_tokens = 0
-                    if hasattr(result, 'usage'):
-                        usage = result.usage
-                        self._total_input_tokens = getattr(usage, 'input_tokens', 0)
-                        self._total_output_tokens = getattr(usage, 'output_tokens', 0)
+                    if hasattr(result, 'metrics') and result.metrics:
+                        usage = result.metrics.accumulated_usage
+                        self._total_input_tokens = usage.get("inputTokens", 0)
+                        self._total_output_tokens = usage.get("outputTokens", 0)
 
                     # Get tool log from persistent MCP session
                     log_result = await mcp_session.call_tool("arena_get_log", {})

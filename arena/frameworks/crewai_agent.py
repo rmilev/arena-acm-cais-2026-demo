@@ -1,5 +1,6 @@
 """CrewAI framework adapter with Bedrock."""
 import os
+import sys
 import asyncio
 import json
 from arena.frameworks.base import FrameworkAdapter
@@ -20,7 +21,7 @@ class CrewAIAdapter(FrameworkAdapter):
     def start_mcp_server(self):
         """MCP server setup."""
         self.server_params = StdioServerParameters(
-            command="python",
+            command=sys.executable,
             args=["arena/mcp_server.py"],
             env=None
         )

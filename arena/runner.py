@@ -2,6 +2,7 @@
 import time
 import json
 import os
+import sys
 from datetime import datetime
 from statistics import median
 from pathlib import Path
@@ -59,7 +60,7 @@ def run_single_scenario(adapter, scenario_id: str, user_message: str):
 
     async def reset_log():
         server_params = StdioServerParameters(
-            command="python",
+            command=sys.executable,
             args=["arena/mcp_server.py"],
             env=None
         )
@@ -84,7 +85,7 @@ def run_single_scenario(adapter, scenario_id: str, user_message: str):
     # Get tool log
     async def get_log():
         server_params = StdioServerParameters(
-            command="python",
+            command=sys.executable,
             args=["arena/mcp_server.py"],
             env=None
         )

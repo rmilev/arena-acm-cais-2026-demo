@@ -1,5 +1,6 @@
 """Claude SDK framework adapter using claude-agent-sdk-python."""
 import os
+import sys
 import asyncio
 import time
 from datetime import datetime
@@ -38,7 +39,7 @@ class ClaudeSDKAdapter(FrameworkAdapter):
         mcp_servers = {
             "arena": {
                 "type": "stdio",
-                "command": "python",
+                "command": sys.executable,
                 "args": ["-m", "arena.mcp_server_v2"]
             }
         }

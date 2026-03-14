@@ -1,4 +1,22 @@
-"""Simplified Arena benchmark runner - focuses on working implementations."""
+"""Arena benchmark runner.
+
+Usage:
+    # Full benchmark (all 6 frameworks, 3 scenarios, K=3 reps each = 54 runs)
+    python -m arena.runner_simple
+
+    # Specific frameworks only
+    python -m arena.runner_simple --frameworks aws_strands crewai google_adk
+
+    # Specific scenarios only
+    python -m arena.runner_simple --scenarios T1 T4
+
+    # Quick validation (K=1 rep, single scenario)
+    python -m arena.runner_simple --quick
+
+    # Custom repetitions
+    python -m arena.runner_simple --reps 5
+"""
+import argparse
 import json
 import time
 from statistics import median
@@ -57,12 +75,13 @@ FRAMEWORKS = {
     "google_adk": {
         "adapter": GoogleADKAdapter,
         "file": "arena/frameworks/google_adk_agent.py",
-        "model": "gemini_flash",
+        "model": "claude_sonnet",
         "status": "implemented"
     },
 }
 
-K = 3  # repetitions per scenario
+ALL_SCENARIOS = ["T1", "T4", "T5"]
+DEFAULT_K = 3  # repetitions per scenario
 
 
 def run_single_scenario(adapter_class, scenario_id: str):
@@ -102,12 +121,12 @@ def run_single_scenario(adapter_class, scenario_id: str):
     }
 
 
-def run_framework_benchmark(framework_name: str):
-    """Run all scenarios for a framework (3 reps each)."""
+def run_framework_benchmark(framework_name: str, scenarios: list[str], k: int):
+    """Run selected scenarios for a framework (k reps each)."""
     fw = FRAMEWORKS[framework_name]
 
     if fw["status"] != "implemented":
-        print(f"\n⚠️  {framework_name}: Not yet implemented, skipping")
+        print(f"\n  {framework_name}: Not yet implemented, skipping")
         return {"status": "not_implemented"}
 
     print(f"\n{'='*70}")
@@ -116,18 +135,23 @@ def run_framework_benchmark(framework_name: str):
 
     results = {"scenarios": {}}
 
-    for scenario_id in ["S1", "S2", "S3"]:
+    for scenario_id in scenarios:
         print(f"\n--- Scenario {scenario_id} ---")
         runs = []
 
-        for rep in range(1, K + 1):
-            print(f"  Rep {rep}/{K}...", end=" ", flush=True)
+        for rep in range(1, k + 1):
+            print(f"  Rep {rep}/{k}...", end=" ", flush=True)
             try:
                 run_result = run_single_scenario(fw["adapter"], scenario_id)
                 runs.append(run_result)
-                print(f"✓ (correctness: {run_result['correctness_score']:.2f})")
+                print(f"  correctness={run_result['correctness_score']:.2f}  "
+                      f"tokens={run_result['input_tokens']}/{run_result['output_tokens']}  "
+                      f"latency={run_result['latency_seconds']}s  "
+                      f"cost=${run_result['cost_usd']:.4f}")
             except Exception as e:
-                print(f"✗ Error: {str(e)[:50]}")
+                import traceback
+                traceback.print_exc()
+                print(f"  ERROR: {str(e)[:80]}")
                 runs.append({"error": str(e), "correctness_score": 0.0})
 
         # Compute aggregates
@@ -250,19 +274,58 @@ def generate_results_table(all_results: dict):
 
 
 def main():
-    """Run benchmark."""
+    """Run benchmark with CLI options."""
+    parser = argparse.ArgumentParser(
+        description="Arena: Agent Framework Comparison Benchmark",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""Examples:
+  python -m arena.runner_simple                          # full benchmark
+  python -m arena.runner_simple --frameworks aws_strands crewai
+  python -m arena.runner_simple --scenarios T1 T4
+  python -m arena.runner_simple --quick                  # K=1, T1 only
+  python -m arena.runner_simple --reps 5                 # 5 repetitions
+""")
+    parser.add_argument(
+        "--frameworks", nargs="+", choices=list(FRAMEWORKS.keys()),
+        default=list(FRAMEWORKS.keys()),
+        help="Frameworks to benchmark (default: all)")
+    parser.add_argument(
+        "--scenarios", nargs="+", choices=ALL_SCENARIOS,
+        default=ALL_SCENARIOS,
+        help="Scenarios to run (default: T1 T4 T5)")
+    parser.add_argument(
+        "--reps", type=int, default=DEFAULT_K,
+        help=f"Repetitions per scenario (default: {DEFAULT_K})")
+    parser.add_argument(
+        "--quick", action="store_true",
+        help="Quick validation: K=1, T1 only")
+
+    args = parser.parse_args()
+
+    if args.quick:
+        args.scenarios = ["T1"]
+        args.reps = 1
+
+    total_runs = len(args.frameworks) * len(args.scenarios) * args.reps
     print("\n" + "="*70)
     print("ARENA: Agent Framework Comparison Benchmark")
+    print("="*70)
+    print(f"  Frameworks: {', '.join(args.frameworks)}")
+    print(f"  Scenarios:  {', '.join(args.scenarios)}")
+    print(f"  Reps (K):   {args.reps}")
+    print(f"  Total runs: {total_runs}")
     print("="*70)
 
     all_results = {}
 
-    for fw_name in FRAMEWORKS.keys():
+    for fw_name in args.frameworks:
         try:
-            results = run_framework_benchmark(fw_name)
+            results = run_framework_benchmark(fw_name, args.scenarios, args.reps)
             all_results[fw_name] = results
         except Exception as e:
-            print(f"\n✗ Framework {fw_name} failed: {e}")
+            import traceback
+            traceback.print_exc()
+            print(f"\nFramework {fw_name} failed: {e}")
             all_results[fw_name] = {"error": str(e)}
 
     # Generate outputs
@@ -271,6 +334,8 @@ def main():
 
     print("\n" + "="*70)
     print("Benchmark complete!")
+    print(f"  Results: arena/results/results.json")
+    print(f"  Table:   arena/results/results_table.md")
     print("="*70)
 
 

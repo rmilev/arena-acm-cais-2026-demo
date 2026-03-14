@@ -8,12 +8,10 @@ dependencies = [
     # Frameworks
     "anthropic>=0.40",
     "strands-agents>=0.1",
-    "strands-agents-mcp>=0.1",
     "langchain>=0.3",
     "langchain-anthropic>=0.3",
     "langchain-mcp-adapters>=0.1",
     "langgraph>=0.2",
-    "langchain-mcp-adapters>=0.1",
     "crewai>=0.80",
     "google-adk>=0.3",
     # Metrics
@@ -21,6 +19,9 @@ dependencies = [
     # Utilities
     "python-dotenv>=1.0",
 ]
+
+[tool.setuptools.packages.find]
+include = ["arena*"]
 
 [project.optional-dependencies]
 dev = ["pytest", "ruff"]

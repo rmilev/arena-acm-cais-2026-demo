@@ -1,5 +1,6 @@
 """Google ADK framework adapter with Bedrock Claude via LiteLLM."""
 import os
+import sys
 import asyncio
 import json
 import litellm
@@ -23,7 +24,7 @@ class GoogleADKAdapter(FrameworkAdapter):
     def start_mcp_server(self):
         """MCP server setup."""
         self.server_params = StdioServerParameters(
-            command="python",
+            command=sys.executable,
             args=["arena/mcp_server.py"],
             env=None
         )
@@ -176,13 +177,19 @@ class GoogleADKAdapter(FrameworkAdapter):
                         parts=[types.Part.from_text(text=user_message)]
                     )
 
-                    # Run the agent and collect response
+                    # Run the agent and collect response + token usage
                     response_text = ""
+                    self._total_input_tokens = 0
+                    self._total_output_tokens = 0
                     async for event in runner.run_async(
                         session_id=session.id,
                         user_id=user_id,
                         new_message=message_content
                     ):
+                        # Accumulate token usage from all events
+                        if hasattr(event, 'usage_metadata') and event.usage_metadata:
+                            self._total_input_tokens += event.usage_metadata.prompt_token_count or 0
+                            self._total_output_tokens += event.usage_metadata.candidates_token_count or 0
                         if event.is_final_response():
                             if event.content and event.content.parts:
                                 response_text = event.content.parts[0].text
@@ -190,11 +197,6 @@ class GoogleADKAdapter(FrameworkAdapter):
                     # Get tool log from the persistent session
                     log_result = await mcp_session.call_tool("arena_get_log", {})
                     self.tool_log = json.loads(log_result.content[0].text)
-
-                    # Extract token usage
-                    # TODO: Google ADK with LiteLLM token tracking
-                    self._total_input_tokens = 0
-                    self._total_output_tokens = 0
 
                     return response_text
 
