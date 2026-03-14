@@ -40,8 +40,6 @@ The demo runs three customer-support scenarios against all six frameworks in rea
 
 | Resource | Link |
 |----------|------|
-| Demo Video (YouTube) | TBD |
-| Demo Video (raw) | TBD |
 | Conference | [ACM CAIS 2026](https://www.caisconf.org/) |
 
 ## Technology Stack
