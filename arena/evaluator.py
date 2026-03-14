@@ -132,11 +132,9 @@ EVALUATORS = {
 }
 
 
-def evaluate_scenario(scenario_id: str, tool_log: list[str], final_response: str) -> tuple:
+def evaluate_scenario(scenario_id: str, tool_log: list[str], final_response: str) -> dict:
     """Route to the appropriate evaluator.
 
-    Returns:
-        (correctness_score: float, criteria_results: dict)
+    Returns dict with correctness_score (0.0-1.0) and correctness_details.
     """
-    result = EVALUATORS[scenario_id](tool_log, final_response)
-    return result["correctness_score"] * 100, result["correctness_details"]
+    return EVALUATORS[scenario_id](tool_log, final_response)
