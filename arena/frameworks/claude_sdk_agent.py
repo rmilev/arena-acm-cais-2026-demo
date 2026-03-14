@@ -101,7 +101,16 @@ class ClaudeSDKAdapter(FrameworkAdapter):
                 elif isinstance(event, ResultMessage):
                     if hasattr(event, 'usage') and isinstance(event.usage, dict):
                         usage = event.usage
-                        self._total_input_tokens = usage.get('input_tokens', 0)
+                        # Claude SDK uses prompt caching, so input tokens are split:
+                        #   input_tokens: non-cached tokens
+                        #   cache_creation_input_tokens: tokens written to cache
+                        #   cache_read_input_tokens: tokens read from cache
+                        # Sum all for total input tokens consumed by the model.
+                        self._total_input_tokens = (
+                            usage.get('input_tokens', 0)
+                            + usage.get('cache_creation_input_tokens', 0)
+                            + usage.get('cache_read_input_tokens', 0)
+                        )
                         self._total_output_tokens = usage.get('output_tokens', 0)
 
         except Exception as e:
